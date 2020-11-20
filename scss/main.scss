@@ -871,6 +871,18 @@ input::-webkit-inner-spin-button {
     margin-top: 15px;
   }
 
+  .enter__nav__inner {
+    justify-content: space-between;
+  }
+
+  .enter__nav__item {
+    width: 50%;
+  }
+
+  .enter__icon__line {
+    width: 100%;
+  }
+
   .payment__label {
     opacity: 1;
   }
