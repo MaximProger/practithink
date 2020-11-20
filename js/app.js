@@ -4,7 +4,9 @@ $(document).ready(function () {
 
   // Student
   let totalCost = 0;
-  const priceDefualt = 12;
+  let priceDefualt = +$(".choose__tarif--active")
+    .find(".choose__vprice__value")
+    .text();
   $(".student__price__value").text(priceDefualt);
 
   // Увеличиваем счетчик
@@ -38,6 +40,12 @@ $(document).ready(function () {
   $(".choose__tarif").click(function () {
     $(".choose__tarif").removeClass("choose__tarif--active");
     $(this).addClass("choose__tarif--active");
+    priceDefualt = +$(".choose__tarif--active")
+      .find(".choose__vprice__value")
+      .text();
+    $(".student__price__value").text(priceDefualt);
+    totalCost = 0;
+    $(".student__input").val(1);
   });
 
   // Inputs

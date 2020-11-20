@@ -135,19 +135,27 @@
         <section class="student">
           <div class="container">
             <div class="student__wrapper">
-              <div class="student__title wow zoomIn">
+              <div class="student__title">
                 <img src="./images/dest/student__icon.svg" alt="Icon" class="student__icon">
                 <h2>Student classroom</h2>
               </div>
 
-              <div class="student__inner wow zoomIn">
+              <div class="student__inner">
                 <div class="student__add__item">
-                  <button class="student__btn student__btn--less" type="button" disabled><img
-                      src="./images/dest/add.svg" alt="less"></button>
+                  <button class="student__btn student__btn--less" type="button" disabled>
+                    <svg width="11" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9.553 16.86c.13 0 .258-.036.367-.103a.623.623 0 00.242-.273.566.566 0 00.038-.352.596.596 0 00-.18-.312L2.356 8.739l7.662-7.081a.585.585 0 00.185-.429.587.587 0 00-.193-.425.688.688 0 00-.46-.179.69.69 0 00-.464.171L.957 8.308a.587.587 0 00-.192.431c0 .162.07.317.193.43l8.129 7.513a.665.665 0 00.214.132.72.72 0 00.252.046z"
+                        fill="#C4C4C4" /></svg>
+                  </button>
                   <input type="number" class="form-control student__input" value="1" min="1" name="addStudent"
                     id="addStudent">
-                  <button class="student__btn student__btn--more" type="button"><img src="./images/dest/add.svg"
-                      alt="less"></button>
+                  <button class="student__btn student__btn--more" type="button">
+                    <svg width="11" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9.553 16.86c.13 0 .258-.036.367-.103a.623.623 0 00.242-.273.566.566 0 00.038-.352.596.596 0 00-.18-.312L2.356 8.739l7.662-7.081a.585.585 0 00.185-.429.587.587 0 00-.193-.425.688.688 0 00-.46-.179.69.69 0 00-.464.171L.957 8.308a.587.587 0 00-.192.431c0 .162.07.317.193.43l8.129 7.513a.665.665 0 00.214.132.72.72 0 00.252.046z"
+                        fill="#C4C4C4" /></svg>
+                  </button>
                 </div>
                 <div class="student__inner__text">
                   <div class="student__price">$<span class="student__price__value"></span>.00</div>
@@ -158,25 +166,25 @@
               </div>
             </div>
             <div class="student__list row">
-              <div class="student__list__left col-12 col-md-8  wow zoomInLeft">
-                <div class="student__item">
+              <div class="student__list__left col-12 col-md-8">
+                <div class="student__item wow fadeInLeft">
                   <img src="./images/dest/check.svg" alt="Check" class="student__check">
                   <p class="student__text">Math, language arts,
                     science, and social studies</p>
                 </div>
 
-                <div class="student__item">
+                <div class="student__item wow fadeInLeft" data-wow-delay="1s">
                   <img src="./images/dest/check.svg" alt="Check" class="student__check">
                   <p class="student__text">Unlimited number of practice</p>
                 </div>
               </div>
-              <div class="student__list__right col-12 col-md-4 wow zoomInRight">
-                <div class="student__item">
+              <div class="student__list__right col-12 col-md-4">
+                <div class="student__item wow fadeInRight">
                   <img src="./images/dest/check.svg" alt="Check" class="student__check">
                   <p class="student__text">Report cards and analytics</p>
                 </div>
 
-                <div class="student__item">
+                <div class="student__item wow fadeInRight" data-wow-delay="1s">
                   <img src="./images/dest/check.svg" alt="Check" class="student__check">
                   <p class="student__text">Unlimited test preparation</p>
                 </div>
@@ -202,31 +210,35 @@
 
             <div class="choose__body choose__body--active">
               <div class="choose__body__inner">
-                <div class="choose__tarif choose__tarif--active wow fadeInUp" data-tarif="1">
+                <div class="choose__tarif choose__tarif--active" data-tarif="1">
                   <div class="choose__tarif__content">
                     <h4 class="choose__tarif__title">Core subjects</h4>
-                    <p class="choose__tarif__dscription"><span class="choose__tarif__price">$12.00/</span> mo</p>
+                    <p class="choose__tarif__dscription"><span class="choose__tarif__price">$<span
+                          class="choose__vprice__value">12</span>.00/</span> mo</p>
                   </div>
                 </div>
 
-                <div class="choose__tarif wow fadeInUp" data-tarif="2">
+                <div class="choose__tarif" data-tarif="2">
                   <div class="choose__tarif__content">
                     <h4 class="choose__tarif__title">Math only</h4>
-                    <p class="choose__tarif__dscription"><span class="choose__tarif__price">$8.00/</span> mo</p>
+                    <p class="choose__tarif__dscription"><span class="choose__tarif__price">$<span
+                          class="choose__vprice__value">8</span>.00/</span> mo</p>
                   </div>
                 </div>
 
-                <div class="choose__tarif wow fadeInUp" data-tarif="3">
+                <div class="choose__tarif" data-tarif="3">
                   <div class="choose__tarif__content">
                     <h4 class="choose__tarif__title">English only</h4>
-                    <p class="choose__tarif__dscription"><span class="choose__tarif__price">$6.00/</span> mo</p>
+                    <p class="choose__tarif__dscription"><span class="choose__tarif__price">$<span
+                          class="choose__vprice__value">6</span>.00/</span> mo</p>
                   </div>
                 </div>
 
-                <div class="choose__tarif wow fadeInUp" data-tarif="4">
+                <div class="choose__tarif" data-tarif="4">
                   <div class="choose__tarif__content">
                     <h4 class="choose__tarif__title">FREE combo</h4>
-                    <p class="choose__tarif__dscription"><span class="choose__tarif__price">0.00/</span> mo</p>
+                    <p class="choose__tarif__dscription"><span class="choose__tarif__price"><span
+                          class="choose__vprice__value">0</span>.00/</span> mo</p>
                   </div>
                 </div>
               </div>
@@ -234,31 +246,35 @@
 
             <div class="choose__body">
               <div class="choose__body__inner">
-                <div class="choose__tarif choose__tarif--active" data-tarif="5">
-                  <div class="choose__tarif__content">
-                    <h4 class="choose__tarif__title">English only</h4>
-                    <p class="choose__tarif__dscription"><span class="choose__tarif__price">$6.00/</span> mo</p>
-                  </div>
-                </div>
-
-                <div class="choose__tarif" data-tarif="6">
-                  <div class="choose__tarif__content">
-                    <h4 class="choose__tarif__title">FREE combo</h4>
-                    <p class="choose__tarif__dscription"><span class="choose__tarif__price">0.00/</span> mo</p>
-                  </div>
-                </div>
-
-                <div class="choose__tarif" data-tarif="7">
+                <div class="choose__tarif" data-tarif="1">
                   <div class="choose__tarif__content">
                     <h4 class="choose__tarif__title">Core subjects</h4>
-                    <p class="choose__tarif__dscription"><span class="choose__tarif__price">$12.00/</span> mo</p>
+                    <p class="choose__tarif__dscription"><span class="choose__tarif__price">$<span
+                          class="choose__vprice__value">13</span>.00/</span> mo</p>
                   </div>
                 </div>
 
-                <div class="choose__tarif" data-tarif="8">
+                <div class="choose__tarif" data-tarif="2">
                   <div class="choose__tarif__content">
                     <h4 class="choose__tarif__title">Math only</h4>
-                    <p class="choose__tarif__dscription"><span class="choose__tarif__price">$8.00/</span> mo</p>
+                    <p class="choose__tarif__dscription"><span class="choose__tarif__price">$<span
+                          class="choose__vprice__value">9</span>.00/</span> mo</p>
+                  </div>
+                </div>
+
+                <div class="choose__tarif" data-tarif="3">
+                  <div class="choose__tarif__content">
+                    <h4 class="choose__tarif__title">English only</h4>
+                    <p class="choose__tarif__dscription"><span class="choose__tarif__price">$<span
+                          class="choose__vprice__value">7</span>.00/</span> mo</p>
+                  </div>
+                </div>
+
+                <div class="choose__tarif" data-tarif="4">
+                  <div class="choose__tarif__content">
+                    <h4 class="choose__tarif__title">FREE combo</h4>
+                    <p class="choose__tarif__dscription"><span class="choose__tarif__price"><span
+                          class="choose__vprice__value">0</span>.00/</span> mo</p>
                   </div>
                 </div>
               </div>
@@ -274,7 +290,7 @@
           <div class="container">
             <h3 class="contact__title">Contact information</h3>
             <div class="contact__inner row">
-              <div class="contact__item col-md-6 col-12 wow slideInUp">
+              <div class="contact__item col-md-6 col-12">
                 <label for="contactName" class="contact__label payment__label payment__label--hidden">Name</label>
                 <div class="contact__wrapper">
                   <img src="./images/dest/name.svg" alt="Name" class="contact__icon">
@@ -283,7 +299,7 @@
                 </div>
               </div>
 
-              <div class="contact__item col-md-6 col-12 wow slideInUp">
+              <div class="contact__item col-md-6 col-12">
                 <label for="contactEmail" class="contact__label payment__label payment__label--hidden">E-mail</label>
                 <div class="contact__wrapper">
                   <img src="./images/dest/email.svg" alt="Name" class="contact__icon">
@@ -344,7 +360,7 @@
 
               <div class="enter__body enter__body--active">
                 <div class="enter__box">
-                  <div class="enter__box__left wow zoomInDown">
+                  <div class="enter__box__left">
                     <div class="enter__item">
                       <label for="enterNumber" class="enter__label payment__label payment__label--hidden">
                         Card number
@@ -357,7 +373,7 @@
                   </div>
 
 
-                  <div class="enter__box__right wow zoomInDown">
+                  <div class="enter__box__right">
                     <div class="enter__item">
                       <div class="enter__item__wrapper">
                         <label for="enterCode" class="enter__label payment__label">Exp. date</label>
@@ -432,7 +448,7 @@
     <div class="benefits benefits--gray">
       <div class="container">
         <h2 class="benefits__title"><b>PractiThink</b> benefits</h2>
-        <div class="benefits__inner  wow zoomIn">
+        <div class="benefits__inner">
           <div class="benefits__item">
             <img src="./images/dest/check.svg" alt="Check" class="benefits__check">
             <p class="benefits__text"><b>3,500+</b> Lessons & More - enjoy.</p>
