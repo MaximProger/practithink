@@ -1,4 +1,7 @@
 @import "config";
+@import "catalog";
+@import "detail";
+@import "cart";
 
 body {
   min-width: 320px;
@@ -11,9 +14,22 @@ body {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  /* display: none; <- Crashes Chrome on hover */
   -webkit-appearance: none;
   margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input,
+button,
+label {
+  outline: none;
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.slick-slide {
+  outline: none;
 }
 
 .main {
@@ -54,6 +70,16 @@ input::-webkit-inner-spin-button {
 
   &:active {
     border-color: transparent;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &--white {
+    color: #68c2d0;
+    background: #fff;
+    border-color: #fff;
   }
 }
 

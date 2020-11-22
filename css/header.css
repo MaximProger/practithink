@@ -3,7 +3,7 @@
   font-weight: normal;
   font-size: 15px;
   line-height: 18px;
-  color: #2F2F2F;
+  color: #2f2f2f;
   font-family: "Nunito", sans-serif;
 }
 
@@ -65,7 +65,7 @@
   right: 0;
   height: 3px;
   border-radius: 4px;
-  background-color: #68C2D0;
+  background-color: #68c2d0;
   transition: 0.5s ease-in-out;
 }
 
@@ -83,7 +83,8 @@
   top: 11px;
 }
 
-#menu__toggle, .menu__btn {
+#menu__toggle,
+.menu__btn {
   display: none;
 }
 
@@ -109,7 +110,7 @@
   position: absolute;
   width: 98%;
   height: 4px;
-  background: #68C2D0;
+  background: #68c2d0;
   border-radius: 8px;
   left: 0;
   top: -10px;
@@ -140,7 +141,7 @@
   line-height: 20px;
   display: flex;
   align-items: center;
-  color: #2F2F2F;
+  color: #2f2f2f;
   transition: 0.3s;
   display: flex;
   align-items: center;
@@ -152,14 +153,14 @@
   transition: 0.3s;
 }
 .header-navigation .list .list-item .submenu a:hover {
-  color: #68C2D0;
+  color: #68c2d0;
 }
 .header-navigation .list .list-item .submenu a:hover svg path {
-  stroke: #68C2D0;
+  stroke: #68c2d0;
 }
 
 .button-log-in {
-  border: 1px solid #0E80A4;
+  border: 1px solid #0e80a4;
   box-sizing: border-box;
   border-radius: 22px;
   padding: 10px 30px;
@@ -168,7 +169,7 @@
   font-size: 16px;
   line-height: 18px;
   text-align: center;
-  color: #0E80A4;
+  color: #0e80a4;
 }
 
 @media (max-width: 1279px) {
@@ -293,4 +294,56 @@
     right: 10%;
     bottom: 10%;
   }
+}
+
+/* Header Icons */
+.header__icons__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header__item {
+  position: relative;
+}
+
+.header__circle {
+  position: absolute;
+  top: -25%;
+  right: -25%;
+  background: #5b7c80;
+  height: 16px;
+  width: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 18px;
+}
+
+.header__item:first-child {
+  margin-right: 15px;
+}
+
+.header__item:last-child {
+  margin-right: 25px;
+}
+
+.header__icon {
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.header__icon:focus {
+  outline: none;
+}
+
+.header__inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
 }

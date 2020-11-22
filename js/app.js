@@ -1,7 +1,4 @@
 $(document).ready(function () {
-  // WOW JS
-  new WOW().init();
-
   // Student
   let totalCost = 0;
   let priceDefualt = +$(".choose__tarif--active")
@@ -78,5 +75,84 @@ $(document).ready(function () {
     $(".enter__nav__item").removeClass("enter__nav__item--active");
     $(this).addClass("enter__nav__item--active");
     $(".enter__body").toggleClass("enter__body--active");
+  });
+
+  // Cart
+  $("#cartClose").click(function () {
+    $(".cart__mask").fadeToggle();
+    $(".cart").animate({ width: "toggle" }, 350);
+  });
+
+  $(".catalog__buy").click(function () {
+    $(".cart__mask").fadeToggle();
+    $(".cart").animate({ width: "toggle" }, 350);
+  });
+
+  // Итоговая цена
+  var $subtotal = $(".cart__total__number");
+  var $prices = $(".cart__price__value");
+  var sum = 0;
+
+  $prices.each(function () {
+    sum += parseInt($(this).text());
+  });
+
+  $subtotal.text(sum);
+
+  let defaulPrice;
+  let finshPrice;
+  // Увеличиваем счетчик товаров (корзина)
+  $(".cart__btn--more").click(function (evt) {
+    evt.preventDefault();
+    $(this)
+      .parent()
+      .find(".cart__input")
+      .val(+$(this).parent().find(".cart__input").val() + 1);
+    $(this).parent().find(".cart__btn--less").prop("disabled", false);
+    // Цена 1-го товара
+    defaulPrice = +$(this)
+      .parent()
+      .parent()
+      .find(".cart__price__value")
+      .data("price");
+    // Цена * количество
+    finshPrice = defaulPrice * +$(this).parent().find(".cart__input").val();
+    $(this).parent().parent().find(".cart__price__value").text(finshPrice);
+
+    sum = 0;
+    $prices.each(function () {
+      sum += parseInt($(this).text());
+    });
+
+    $subtotal.text(sum);
+  });
+
+  // Уменьшаем счетчик товаров (корзина)
+  $(".cart__btn--less").click(function (evt) {
+    evt.preventDefault();
+    $(this)
+      .parent()
+      .find(".cart__input")
+      .val(+$(this).parent().find(".cart__input").val() - 1);
+    if ($(this).parent().find(".cart__input").val() <= 1)
+      $(this).prop("disabled", true);
+
+    finshPrice = defaulPrice * +$(this).parent().find(".cart__input").val();
+    $(this).parent().parent().find(".cart__price__value").text(finshPrice);
+
+    sum = 0;
+    $prices.each(function () {
+      sum += parseInt($(this).text());
+    });
+
+    $subtotal.text(sum);
+  });
+
+  // Add to cart
+  $(".catalog__buy").click(function () {
+    let cartItem = $(this).parents(".catalog__item").clone();
+    console.log(cartItem);
+    let cartItemTitle = cartItem.find(".catalog__item__title").text();
+    console.log(cartItemTitle);
   });
 });
