@@ -787,7 +787,70 @@ label {
   user-select: none;
 }
 
+// Modal
+.modal__window {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  background: #fff;
+  width: 810px;
+  padding: 35px 40px;
+  border-radius: 7px;
+}
+
+.reviews__stars {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+
+.review__star {
+  cursor: pointer;
+  transition: all 0.2s linear;
+  &:hover {
+    background: url("../images/dest/detail/star__big--active.svg") no-repeat
+      center;
+  }
+}
+
+.review__star:hover ~ .review__star {
+  background: url("../images/dest/detail/star__big--active.svg") no-repeat
+    center;
+}
+
+.modal__head {
+  position: relative;
+}
+
+.modal__title {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 18px;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.modal__btn {
+  background: none;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: rotate(45deg);
+  transition: all 0.2s linear;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
 @media (max-width: $tablet) {
+  .modal__window {
+    width: 90%;
+    padding: 20px;
+  }
 }
 
 @media (max-width: $mobile) {

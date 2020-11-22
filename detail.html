@@ -165,14 +165,14 @@
           <div class="detail__nav__line"></div>
         </div>
 
-
+        <button class="btn filter__btn filter__btn--detail" id="openFilter">Filter</button>
         <div class="detail__body row">
 
           <!-- Item -->
-          <div class="detail__content detail__section__hidden detail__section__hidden--active col-9" data-nav="item">
+          <div class="detail__content detail__section__hidden detail__section__hidden--active col-12 col-lg-9"
+            data-nav="item">
             <div class="detail__intro">
               <div class="detail__intro__wrapper">
-
                 <div class="detail__intro__item">
                   <div class="detail__preview">
                     <div class="detail__preview__wrapper" id="previewSlider">
@@ -190,38 +190,70 @@
                       </div>
                     </div>
                   </div>
-                  <div class="detail__intro__content">
-                    <div class="detail__text__item">
-                      <span class="detail__sup__text">Subject</span>
-                      <span class="detail__sub__text">Math</span>
-                    </div>
 
-                    <div class="detail__text__item">
-                      <span class="detail__sup__text">Grade Levels</span>
-                      <span class="detail__sub__text">4th, 5th, 6th</span>
-                    </div>
+                  <div class="detail__intro__content__wrapper">
+                    <div class="detail__intro__content">
+                      <div class="detail__text__item">
+                        <span class="detail__sup__text">Subject</span>
+                        <span class="detail__sub__text">Math</span>
+                      </div>
 
-                    <div class="detail__text__item">
-                      <span class="detail__sup__text">Resource Type</span>
-                      <span class="detail__sub__text">Math Center, Activities</span>
-                    </div>
+                      <div class="detail__text__item">
+                        <span class="detail__sup__text">Grade Levels</span>
+                        <span class="detail__sub__text">4th, 5th, 6th</span>
+                      </div>
 
-                    <div class="detail__text__item">
-                      <span class="detail__sup__text">File Type</span>
-                      <span class="detail__sub__text">PDF (32 MB) 16 pages</span>
-                    </div>
+                      <div class="detail__text__item">
+                        <span class="detail__sup__text">Resource Type</span>
+                        <span class="detail__sub__text">Math Center, Activities</span>
+                      </div>
 
-                    <div class="detail__rating">
-                      <div class="detail__rating__wrapper">
-                        <div class="detail__stars">
-                          <span class="detail__star detail__star--active"></span>
-                          <span class="detail__star detail__star--active"></span>
-                          <span class="detail__star detail__star--active"></span>
-                          <span class="detail__star detail__star--active"></span>
-                          <span class="detail__star"></span>
+                      <div class="detail__text__item">
+                        <span class="detail__sup__text">File Type</span>
+                        <span class="detail__sub__text">PDF (32 MB) 16 pages</span>
+                      </div>
+
+                      <div class="detail__rating">
+                        <div class="detail__rating__wrapper">
+                          <div class="detail__stars">
+                            <span class="detail__star detail__star--active"></span>
+                            <span class="detail__star detail__star--active"></span>
+                            <span class="detail__star detail__star--active"></span>
+                            <span class="detail__star detail__star--active"></span>
+                            <span class="detail__star"></span>
+                          </div>
+                          <span class="detail__point">4.1</span>
+                          <div class="detail__count">(<a href="#">34</a>)</div>
                         </div>
-                        <span class="detail__point">4.1</span>
-                        <div class="detail__count">(<a href="#">34</a>)</div>
+                      </div>
+                    </div>
+
+                    <div class="detail__info__wrapper">
+                      <div class="detail__buy no-xl md">
+                        <div class="detail__buy__wrapper">
+                          <div class="detail__buy__price">
+                            $2.99
+                          </div>
+                          <a href="#" class="detail__buy__btn btn">Buy Now</a>
+                          <div class="detail__buy__wish">
+                            <svg class="detail__heart" width="18" height="15" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <g clip-path="url(#clip0)">
+                                <path
+                                  d="M9.639 2.49h0a3.805 3.805 0 012.737-1.175c1.024 0 2.009.421 2.738 1.176h0a4.114 4.114 0 011.142 2.858 4.114 4.114 0 01-1.143 2.858h0L9.158 14.37a.158.158 0 01-.233 0L2.97 8.207c-1.523-1.577-1.523-4.14 0-5.716a3.775 3.775 0 015.474 0l.238.246.36.372.36-.372.237-.246z"
+                                  stroke="#0E80A4" />
+                              </g>
+                              <defs>
+                                <clipPath id="clip0">
+                                  <path fill="#fff" transform="translate(.857 .817)" d="M0 0h16.286v14.107H0z" />
+                                </clipPath>
+                              </defs>
+                            </svg>
+                            <span class="detail__wish__text">
+                              Add to Wish List
+                            </span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -307,12 +339,9 @@
             <div class="catalog__list__section detail__catalog">
               <h2 class="catalog__list__title">You may also like</h2>
               <div class="catalog__list__inner row">
-                <div class="catalog__item col-4">
+                <div class="catalog__item col-6 col-lg-4" id="cartItemId-2">
                   <div class="catalog__item__wrapper">
                     <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
-                    <div class="catalog__item__favorite">
-                      <span class="catalor__item__heart catalor__item__heart--active"></span>
-                    </div>
                   </div>
                   <div class="catalog__item__body">
                     <h3 class="catalog__item__title">Lorem ipsum dolor sit amet.</h3>
@@ -325,16 +354,21 @@
                     <span class="catalog__item__grade">
                       Grade 4
                     </span>
-                    <span class="catalog__item__price">$20</span>
+                    <span class="catalog__item__price">$<span class="catalog__item__value">100</span></span>
+                  </div>
+                  <div class="catalog__mask">
+                    <div class="catalog__mask__wrapper">
+                      <button type="button" class="btn catalog__mask__btn catalog__buy">Add to cart</button>
+                      <a href="#" class="btn catalog__mask__btn">See details</a>
+                    </div>
+                  </div>
+                  <div class="catalog__item__favorite">
+                    <span class="catalor__item__heart catalor__item__heart--active"></span>
                   </div>
                 </div>
-
-                <div class="catalog__item col-4">
+                <div class="catalog__item col-6 col-lg-4" id="cartItemId-2">
                   <div class="catalog__item__wrapper">
                     <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
-                    <div class="catalog__item__favorite">
-                      <span class="catalor__item__heart"></span>
-                    </div>
                   </div>
                   <div class="catalog__item__body">
                     <h3 class="catalog__item__title">Lorem ipsum dolor sit amet.</h3>
@@ -347,16 +381,21 @@
                     <span class="catalog__item__grade">
                       Grade 4
                     </span>
-                    <span class="catalog__item__price">$20</span>
+                    <span class="catalog__item__price">$<span class="catalog__item__value">100</span></span>
+                  </div>
+                  <div class="catalog__mask">
+                    <div class="catalog__mask__wrapper">
+                      <button type="button" class="btn catalog__mask__btn catalog__buy">Add to cart</button>
+                      <a href="#" class="btn catalog__mask__btn">See details</a>
+                    </div>
+                  </div>
+                  <div class="catalog__item__favorite">
+                    <span class="catalor__item__heart catalor__item__heart--active"></span>
                   </div>
                 </div>
-
-                <div class="catalog__item col-4">
+                <div class="catalog__item col-6 col-lg-4" id="cartItemId-2">
                   <div class="catalog__item__wrapper">
                     <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
-                    <div class="catalog__item__favorite">
-                      <span class="catalor__item__heart catalor__item__heart--active"></span>
-                    </div>
                   </div>
                   <div class="catalog__item__body">
                     <h3 class="catalog__item__title">Lorem ipsum dolor sit amet.</h3>
@@ -369,7 +408,16 @@
                     <span class="catalog__item__grade">
                       Grade 4
                     </span>
-                    <span class="catalog__item__price">$20</span>
+                    <span class="catalog__item__price">$<span class="catalog__item__value">100</span></span>
+                  </div>
+                  <div class="catalog__mask">
+                    <div class="catalog__mask__wrapper">
+                      <button type="button" class="btn catalog__mask__btn catalog__buy">Add to cart</button>
+                      <a href="#" class="btn catalog__mask__btn">See details</a>
+                    </div>
+                  </div>
+                  <div class="catalog__item__favorite">
+                    <span class="catalor__item__heart catalor__item__heart--active"></span>
                   </div>
                 </div>
               </div>
@@ -378,10 +426,18 @@
 
 
           <!-- Reviews -->
-          <div class="detail__recall col-9 detail__section__hidden" data-nav="reviews">
-            <div class="detail__recall__head">
+          <div class="detail__recall  col-12 col-lg-9 detail__section__hidden" data-nav="reviews">
 
+            <div class="detail__nav detail__nav--tab">
+              <div class="detail__nav__inner">
+                <button class="detail__nav__item detail__nav__item--active">
+                  <span class="detail__nav__text">3 Reviews</span>
+                </button>
+                <button type="button" class="btn detail__tab__btn" id="addReview">Add Review</button>
+              </div>
+              <div class="detail__nav__line"></div>
             </div>
+
 
             <div class="detail__recall__list">
 
@@ -441,14 +497,18 @@
           </div>
 
           <!-- Comments -->
-          <div class="detail__comments__box col-9 detail__section__hidden" data-nav="comments">
+          <div class="detail__comments__box  col-12 col-lg-9 detail__section__hidden" data-nav="comments">
 
-            <div class="detail__tab__inner">
-              <div class="detail__tab__wrapper">
-                <button type="button" class="detail__tabs">2 Comments</button>
-                <button type="button" class="detail__tabs detail__tabs--active">Add Comments</button>
+            <div class="detail__nav detail__nav--tab">
+              <div class="detail__nav__inner">
+                <button class="detail__nav__item detail__nav__item--active">
+                  <span class="detail__nav__text">2 Comments</span>
+                </button>
+                <button type="button" class="btn detail__tab__btn" id="addComments">Add Comments</button>
               </div>
+              <div class="detail__nav__line"></div>
             </div>
+
             <div class="detail__recall">
               <div class="detail__recall__list">
 
@@ -457,14 +517,11 @@
                   <div class="detail__recall__date">
                     <img src="./images/dest/detail/calendar.svg" alt="Date" class="detail__recall__calendar">
                     12.12.2012
+                    <span class="detail__recall__from">
+                      Minsk, Belarus
+                    </span>
                   </div>
-                  <div class="detail__stars">
-                    <span class="detail__star detail__star--active"></span>
-                    <span class="detail__star detail__star--active"></span>
-                    <span class="detail__star detail__star--active"></span>
-                    <span class="detail__star detail__star--active"></span>
-                    <span class="detail__star"></span>
-                  </div>
+                  <div class="detail__recall__theme">Lorem ipsum </div>
                   <p class="detail__recall__text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, optio minima provident similique
                     voluptates iure eveniet temporibus fugiat asperiores nihil ea et, magnam nostrum error? Doloribus
@@ -501,16 +558,15 @@
                   <div class="detail__recall__date">
                     <img src="./images/dest/detail/calendar.svg" alt="Date" class="detail__recall__calendar">
                     12.12.2012
+                    <span class="detail__recall__from">
+                      Minsk, Belarus
+                    </span>
                   </div>
-                  <div class="detail__stars">
-                    <span class="detail__star detail__star--active"></span>
-                    <span class="detail__star detail__star--active"></span>
-                    <span class="detail__star detail__star--active"></span>
-                    <span class="detail__star detail__star--active"></span>
-                    <span class="detail__star"></span>
-                  </div>
+                  <div class="detail__recall__theme">Lorem ipsum</div>
                   <p class="detail__recall__text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, optio minima provident similique
+                    voluptates iure eveniet temporibus fugiat asperiores nihil ea et, magnam nostrum error? Doloribus
+                    veniam amet minus sit, ad similique autem totam ipsam.
                   </p>
                   <div class="detail__like__wrapper">
                     <div class="detail__like__item">
@@ -527,38 +583,10 @@
 
               </div>
             </div>
-
-
-            <form action="/" class="detail__form detail__form--comments" name="commentsForm">
-              <div class="detail__form__wrapper row">
-                <div class="contact__item col-md-6 col-12">
-                  <div class="contact__wrapper">
-                    <input type="text" class="form-control payment__input" name="commentsName" id="commentsName"
-                      placeholder="Name" required>
-                  </div>
-                </div>
-                <div class="contact__item col-md-6 col-12">
-                  <div class="contact__wrapper">
-                    <input type="email" class="form-control payment__input" name="commentsEmail" id="commentsEmail"
-                      placeholder="Email" required>
-                  </div>
-                </div>
-
-                <div class="contact__item contact__item--textarea col-12">
-                  <div class="contact__wrapper">
-                    <textarea placeholder="Reviews" name="commentsText" class="form-control payment__input"
-                      id="commentsText" required></textarea>
-                  </div>
-                </div>
-
-                <button type="submit" name="commentsSubmit" class="btn detail__form__btn">Add Reviews</button>
-              </div>
-            </form>
-
           </div>
 
           <!-- Support -->
-          <div class="detail__support col-9 detail__section__hidden" data-nav="support">
+          <div class="detail__support col-12 col-lg-9 detail__section__hidden" data-nav="support">
             <h2 class="detail__support__title">Frequently Asked Questions</h2>
             <div class="detail__questions">
 
@@ -624,10 +652,10 @@
           </div>
 
           <!-- Filter -->
-          <div class="detail__filter col-3">
+          <div class="detail__filter col-3" id="filter">
             <div class="catalog__filter__wrapper">
 
-              <div class="detail__buy">
+              <div class="detail__buy no-md">
                 <div class="detail__buy__wrapper">
                   <div class="detail__buy__price">
                     $2.99
@@ -741,6 +769,269 @@
       </div>
     </div>
   </footer>
+
+  <div class="mask"></div>
+  <!-- Modal Windows -->
+  <div class="modal__window modal__window--reviews" id="modalReviews">
+    <div class="modal__wrapper">
+      <div class="modal__head">
+        <div class="modal__title">Add review</div>
+        <button type="button" class="modal__btn">
+          <img src="./images/dest/detail/question.svg" alt="Open/Close">
+        </button>
+      </div>
+      <div class="modal__body">
+        <form action="/" class="detail__form detail__form--reviews" name="reviewsForm">
+          <div class="detail__form__wrapper row">
+            <div class="contact__item col-md-6 col-12">
+              <div class="contact__wrapper">
+                <input type="text" class="form-control payment__input" name="reviewsName" id="reviewsName"
+                  placeholder="Name" required>
+              </div>
+            </div>
+            <div class="contact__item col-md-6 col-12">
+              <div class="contact__wrapper">
+                <input type="text" class="form-control payment__input" name="reviewsCity" id="reviewsCity"
+                  placeholder="City, State" required>
+              </div>
+            </div>
+
+            <div class="contact__item col-12">
+              <div class="contact__wrapper">
+                <input type="text" class="form-control payment__input" name="reviewsSubject" id="reviewsSubject"
+                  placeholder="Subject line" required>
+              </div>
+            </div>
+
+            <div class="contact__item contact__item--textarea col-12">
+              <div class="contact__wrapper">
+                <textarea placeholder="Reviews" name="reviewsText" class="form-control payment__input" id="reviewsText"
+                  required></textarea>
+              </div>
+            </div>
+
+            <div class="contact__item rating__item col-12">
+              <div class="contact__wrapper">
+                <span class="rating__item__title">Whats?</span>
+                <div class="rating__item__wrapper">
+                  <div class="detail__stars reviews__stars">
+                    <span class="detail__star review__star review__star--1"></span>
+                    <span class="detail__star review__star review__star--2"></span>
+                    <span class="detail__star review__star review__star--3"></span>
+                    <span class="detail__star review__star review__star--4"></span>
+                    <span class="detail__star review__star review__star--5"></span>
+                  </div>
+                  <div class="rating__item__value">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" name="reviewsSubmit" class="btn detail__form__btn">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal__window modal__window--comments" id="modalComments">
+    <div class="modal__wrapper">
+      <div class="modal__head">
+        <div class="modal__title">Add Comments</div>
+        <button type="button" class="modal__btn">
+          <img src="./images/dest/detail/question.svg" alt="Open/Close">
+        </button>
+      </div>
+      <div class="modal__body">
+        <form action="/" class="detail__form detail__form--comments" name="commentsForm">
+          <div class="detail__form__wrapper row">
+            <div class="contact__item col-md-6 col-12">
+              <div class="contact__wrapper">
+                <input type="text" class="form-control payment__input" name="commentsName" id="commentsName"
+                  placeholder="Name" required>
+              </div>
+            </div>
+            <div class="contact__item col-md-6 col-12">
+              <div class="contact__wrapper">
+                <input type="text" class="form-control payment__input" name="commentsCity" id="commentsCity"
+                  placeholder="City, State" required>
+              </div>
+            </div>
+
+            <div class="contact__item col-12">
+              <div class="contact__wrapper">
+                <input type="text" class="form-control payment__input" name="commentsSubject" id="commentsSubject"
+                  placeholder="Subject line" required>
+              </div>
+            </div>
+
+            <div class="contact__item contact__item--textarea col-12">
+              <div class="contact__wrapper">
+                <textarea placeholder="Comments" name="commentsText" class="form-control payment__input"
+                  id="commentsText" required></textarea>
+              </div>
+            </div>
+
+            <div class="contact__item rating__item col-12">
+              <div class="contact__wrapper">
+                <span class="rating__item__title">Whats?</span>
+                <div class="detail__like__wrapper detail__like__wrapper--modal">
+                  <div class="detail__like__item">
+                    <button id="modalLike" class="detail__like" type="button">
+                      <svg width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M13.02 22c-1.5 0-2.67-.014-3.51-.043-.84-.029-1.486-.09-1.937-.183-.451-.093-.736-.172-.854-.236a6.902 6.902 0 01-.573-.376c-.208-.172-.587-.311-1.136-.419-.548-.107-1.461-.204-2.74-.29a.688.688 0 01-.52-.258 9.024 9.024 0 01-.167-.279 8.956 8.956 0 01-.354-.72 10.987 10.987 0 01-.427-1.106 10.03 10.03 0 01-.344-1.504 11.426 11.426 0 01-.146-1.826c0-2.091.34-3.695 1.021-4.813a.658.658 0 01.584-.322c1.166 0 2.448-.73 3.843-2.191 1.396-1.461 2.601-3.445 3.615-5.952a2.19 2.19 0 00.135-.3 6.7 6.7 0 00.115-.301c.014-.043.052-.125.115-.247a.708.708 0 01.166-.237 3.66 3.66 0 00.198-.16.62.62 0 01.26-.14c.09-.022.202-.043.334-.065.132-.021.281-.032.448-.032.25 0 .507.057.77.172.265.114.508.268.73.462.222.193.403.412.541.655.264.444.417 1.081.459 1.912.041.83.017 1.604-.073 2.32-.09.717-.212 1.404-.365 2.063 2.473-.014 4.153-.021 5.042-.021.82 0 1.483.229 1.99.687.507.458.767 1.06.78 1.805.015.63-.048 1.11-.187 1.44.236.243.434.497.594.762.16.265.247.562.26.891.014.674-.305 1.361-.958 2.063a3.924 3.924 0 01.177.473 2.43 2.43 0 01.073.58c-.028.787-.472 1.49-1.333 2.105.07.473.062.895-.021 1.268C19.292 21.212 17.09 22 13.021 22zM2.626 19.057c2.278.186 3.722.515 4.333.988.223.172.417.286.584.344.166.057.666.11 1.5.16.833.05 2.16.076 3.979.076.57 0 1.087-.014 1.552-.043a29.686 29.686 0 001.614-.15c.612-.072 1.105-.2 1.48-.387.375-.186.597-.423.666-.71.056-.3-.076-.622-.395-.966a.691.691 0 010-.526.647.647 0 01.333-.376h.02a4.075 4.075 0 00.677-.344 1.68 1.68 0 00.47-.419.945.945 0 00.208-.483c0-.058-.004-.111-.01-.161a6.263 6.263 0 00-.021-.14.466.466 0 00-.042-.129l-.052-.107-.052-.086-.052-.075-.042-.054-.031-.043-.01-.022a.515.515 0 01-.105-.236.802.802 0 010-.258.672.672 0 01.094-.247.822.822 0 01.177-.204c.083-.043.174-.104.27-.183.098-.078.22-.225.365-.44a1.14 1.14 0 00.22-.645c-.015-.358-.279-.694-.793-1.01a.82.82 0 01-.333-.472.528.528 0 01-.01-.183.962.962 0 01.041-.193.65.65 0 01.136-.236c.014-.022.041-.075.083-.162a1.923 1.923 0 00.177-.537 1.79 1.79 0 00.032-.322 1.234 1.234 0 00-.198-.644.902.902 0 00-.459-.355 2.426 2.426 0 00-.448-.118 2.605 2.605 0 00-.333-.021h-4.875l-1.125.021a.666.666 0 01-.458-.183.426.426 0 01-.104-.14c-.126-.185-.146-.4-.063-.644.222-.659.4-1.382.531-2.17.132-.787.195-1.54.188-2.256-.007-.716-.108-1.239-.302-1.568a2.695 2.695 0 00-.084-.15 2.75 2.75 0 01-.083-.15.53.53 0 00-.094-.119.477.477 0 00-.146-.107 1.176 1.176 0 00-.49-.097.22.22 0 00-.124.043 1.161 1.161 0 00-.188.193c-.083.1-.16.237-.229.409-1.07 2.664-2.36 4.787-3.875 6.37-1.514 1.582-2.979 2.445-4.396 2.588a8.756 8.756 0 00-.291.774c-.084.258-.17.666-.26 1.225a11.18 11.18 0 00-.136 1.783c0 .644.062 1.285.187 1.923.125.637.254 1.138.386 1.503.132.366.267.656.406.87z"
+                          fill="#68C2D0" /></svg>
+                    </button>
+                  </div>
+
+                  <span class="detail__like__text">or</span>
+
+                  <div class="detail__like__item detail__like__item--dislike">
+
+                    <button id="modalDislike" class="detail__like" type="button">
+                      <svg width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M13.02 22c-1.5 0-2.67-.014-3.51-.043-.84-.029-1.486-.09-1.937-.183-.451-.093-.736-.172-.854-.236a6.902 6.902 0 01-.573-.376c-.208-.172-.587-.311-1.136-.419-.548-.107-1.461-.204-2.74-.29a.688.688 0 01-.52-.258 9.024 9.024 0 01-.167-.279 8.956 8.956 0 01-.354-.72 10.987 10.987 0 01-.427-1.106 10.03 10.03 0 01-.344-1.504 11.426 11.426 0 01-.146-1.826c0-2.091.34-3.695 1.021-4.813a.658.658 0 01.584-.322c1.166 0 2.448-.73 3.843-2.191 1.396-1.461 2.601-3.445 3.615-5.952a2.19 2.19 0 00.135-.3 6.7 6.7 0 00.115-.301c.014-.043.052-.125.115-.247a.708.708 0 01.166-.237 3.66 3.66 0 00.198-.16.62.62 0 01.26-.14c.09-.022.202-.043.334-.065.132-.021.281-.032.448-.032.25 0 .507.057.77.172.265.114.508.268.73.462.222.193.403.412.541.655.264.444.417 1.081.459 1.912.041.83.017 1.604-.073 2.32-.09.717-.212 1.404-.365 2.063 2.473-.014 4.153-.021 5.042-.021.82 0 1.483.229 1.99.687.507.458.767 1.06.78 1.805.015.63-.048 1.11-.187 1.44.236.243.434.497.594.762.16.265.247.562.26.891.014.674-.305 1.361-.958 2.063a3.924 3.924 0 01.177.473 2.43 2.43 0 01.073.58c-.028.787-.472 1.49-1.333 2.105.07.473.062.895-.021 1.268C19.292 21.212 17.09 22 13.021 22zM2.626 19.057c2.278.186 3.722.515 4.333.988.223.172.417.286.584.344.166.057.666.11 1.5.16.833.05 2.16.076 3.979.076.57 0 1.087-.014 1.552-.043a29.686 29.686 0 001.614-.15c.612-.072 1.105-.2 1.48-.387.375-.186.597-.423.666-.71.056-.3-.076-.622-.395-.966a.691.691 0 010-.526.647.647 0 01.333-.376h.02a4.075 4.075 0 00.677-.344 1.68 1.68 0 00.47-.419.945.945 0 00.208-.483c0-.058-.004-.111-.01-.161a6.263 6.263 0 00-.021-.14.466.466 0 00-.042-.129l-.052-.107-.052-.086-.052-.075-.042-.054-.031-.043-.01-.022a.515.515 0 01-.105-.236.802.802 0 010-.258.672.672 0 01.094-.247.822.822 0 01.177-.204c.083-.043.174-.104.27-.183.098-.078.22-.225.365-.44a1.14 1.14 0 00.22-.645c-.015-.358-.279-.694-.793-1.01a.82.82 0 01-.333-.472.528.528 0 01-.01-.183.962.962 0 01.041-.193.65.65 0 01.136-.236c.014-.022.041-.075.083-.162a1.923 1.923 0 00.177-.537 1.79 1.79 0 00.032-.322 1.234 1.234 0 00-.198-.644.902.902 0 00-.459-.355 2.426 2.426 0 00-.448-.118 2.605 2.605 0 00-.333-.021h-4.875l-1.125.021a.666.666 0 01-.458-.183.426.426 0 01-.104-.14c-.126-.185-.146-.4-.063-.644.222-.659.4-1.382.531-2.17.132-.787.195-1.54.188-2.256-.007-.716-.108-1.239-.302-1.568a2.695 2.695 0 00-.084-.15 2.75 2.75 0 01-.083-.15.53.53 0 00-.094-.119.477.477 0 00-.146-.107 1.176 1.176 0 00-.49-.097.22.22 0 00-.124.043 1.161 1.161 0 00-.188.193c-.083.1-.16.237-.229.409-1.07 2.664-2.36 4.787-3.875 6.37-1.514 1.582-2.979 2.445-4.396 2.588a8.756 8.756 0 00-.291.774c-.084.258-.17.666-.26 1.225a11.18 11.18 0 00-.136 1.783c0 .644.062 1.285.187 1.923.125.637.254 1.138.386 1.503.132.366.267.656.406.87z"
+                          fill="#888888" /></svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" name="commentsSubmit" class="btn detail__form__btn">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart -->
+  <section class="cart">
+    <div class="cart__wrapper">
+      <div class="cart__inner">
+        <div class="cart__head">
+          <h2 class="cart__title">Cart</h2>
+          <button type="button" class="cart__close" id="cartClose">
+            <svg width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M8.5.344a.906.906 0 01.906.906V8.5a.906.906 0 01-.906.906H1.25a.906.906 0 010-1.812h6.344V1.25A.906.906 0 018.5.344z"
+                fill="#2F2F2F" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M7.594 8.5a.906.906 0 01.906-.906h7.25a.906.906 0 110 1.812H9.406v6.344a.906.906 0 11-1.812 0V8.5z"
+                fill="#2F2F2F" /></svg>
+          </button>
+        </div>
+        <div class="cart__body">
+
+          <div class="cart__item">
+            <img src="./images/dest/cart__img.png" alt="CartImg" class="cart__img">
+            <div class="cart__content">
+              <div class="cart__content__title">Lorem ipsum dolor sit amet.</div>
+              <div class="cart__content__description">
+                by: PractiThink
+              </div>
+              <div class="cart__content__wrapper">
+
+                <div class="cart__add__item">
+                  <button class="cart__btn cart__btn--less" type="button" disabled>
+                    <svg width="11" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9.553 16.86c.13 0 .258-.036.367-.103a.623.623 0 00.242-.273.566.566 0 00.038-.352.596.596 0 00-.18-.312L2.356 8.739l7.662-7.081a.585.585 0 00.185-.429.587.587 0 00-.193-.425.688.688 0 00-.46-.179.69.69 0 00-.464.171L.957 8.308a.587.587 0 00-.192.431c0 .162.07.317.193.43l8.129 7.513a.665.665 0 00.214.132.72.72 0 00.252.046z"
+                        fill="#C4C4C4" /></svg>
+                  </button>
+                  <input type="number" class="form-control cart__input" value="1" min="1" name="addcart" id="addcart">
+                  <button class="cart__btn cart__btn--more" type="button">
+                    <svg width="11" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9.553 16.86c.13 0 .258-.036.367-.103a.623.623 0 00.242-.273.566.566 0 00.038-.352.596.596 0 00-.18-.312L2.356 8.739l7.662-7.081a.585.585 0 00.185-.429.587.587 0 00-.193-.425.688.688 0 00-.46-.179.69.69 0 00-.464.171L.957 8.308a.587.587 0 00-.192.431c0 .162.07.317.193.43l8.129 7.513a.665.665 0 00.214.132.72.72 0 00.252.046z"
+                        fill="#C4C4C4" /></svg>
+                  </button>
+                </div>
+
+                <div class="cart__price">$<span class="cart__price__value" data-price="20">20</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cart__item">
+            <img src="./images/dest/cart__img.png" alt="CartImg" class="cart__img">
+            <div class="cart__content">
+              <div class="cart__content__title">Lorem ipsum dolor sit amet.</div>
+              <div class="cart__content__description">
+                by: PractiThink
+              </div>
+              <div class="cart__content__wrapper">
+
+                <div class="cart__add__item">
+                  <button class="cart__btn cart__btn--less" type="button" disabled>
+                    <svg width="11" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9.553 16.86c.13 0 .258-.036.367-.103a.623.623 0 00.242-.273.566.566 0 00.038-.352.596.596 0 00-.18-.312L2.356 8.739l7.662-7.081a.585.585 0 00.185-.429.587.587 0 00-.193-.425.688.688 0 00-.46-.179.69.69 0 00-.464.171L.957 8.308a.587.587 0 00-.192.431c0 .162.07.317.193.43l8.129 7.513a.665.665 0 00.214.132.72.72 0 00.252.046z"
+                        fill="#C4C4C4" /></svg>
+                  </button>
+                  <input type="number" class="form-control cart__input" value="1" min="1" name="addcart" id="addcart">
+                  <button class="cart__btn cart__btn--more" type="button">
+                    <svg width="11" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9.553 16.86c.13 0 .258-.036.367-.103a.623.623 0 00.242-.273.566.566 0 00.038-.352.596.596 0 00-.18-.312L2.356 8.739l7.662-7.081a.585.585 0 00.185-.429.587.587 0 00-.193-.425.688.688 0 00-.46-.179.69.69 0 00-.464.171L.957 8.308a.587.587 0 00-.192.431c0 .162.07.317.193.43l8.129 7.513a.665.665 0 00.214.132.72.72 0 00.252.046z"
+                        fill="#C4C4C4" /></svg>
+                  </button>
+                </div>
+
+                <div class="cart__price">$<span class="cart__price__value" data-price="20">20</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cart__item">
+            <img src="./images/dest/cart__img.png" alt="CartImg" class="cart__img">
+            <div class="cart__content">
+              <div class="cart__content__title">Lorem ipsum dolor sit amet.</div>
+              <div class="cart__content__description">
+                by: PractiThink
+              </div>
+              <div class="cart__content__wrapper">
+
+                <div class="cart__add__item">
+                  <button class="cart__btn cart__btn--less" type="button" disabled>
+                    <svg width="11" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9.553 16.86c.13 0 .258-.036.367-.103a.623.623 0 00.242-.273.566.566 0 00.038-.352.596.596 0 00-.18-.312L2.356 8.739l7.662-7.081a.585.585 0 00.185-.429.587.587 0 00-.193-.425.688.688 0 00-.46-.179.69.69 0 00-.464.171L.957 8.308a.587.587 0 00-.192.431c0 .162.07.317.193.43l8.129 7.513a.665.665 0 00.214.132.72.72 0 00.252.046z"
+                        fill="#C4C4C4" /></svg>
+                  </button>
+                  <input type="number" class="form-control cart__input" value="1" min="1" name="addcart" id="addcart">
+                  <button class="cart__btn cart__btn--more" type="button">
+                    <svg width="11" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9.553 16.86c.13 0 .258-.036.367-.103a.623.623 0 00.242-.273.566.566 0 00.038-.352.596.596 0 00-.18-.312L2.356 8.739l7.662-7.081a.585.585 0 00.185-.429.587.587 0 00-.193-.425.688.688 0 00-.46-.179.69.69 0 00-.464.171L.957 8.308a.587.587 0 00-.192.431c0 .162.07.317.193.43l8.129 7.513a.665.665 0 00.214.132.72.72 0 00.252.046z"
+                        fill="#C4C4C4" /></svg>
+                  </button>
+                </div>
+
+                <div class="cart__price">$<span class="cart__price__value" data-price="20">20</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="cart__bottom">
+        <div class="cart__bottom__line">
+          <div class="cart__total__text">Subtotal</div>
+          <div class="cart__total__value">$<span class="cart__total__number">659</span></div>
+        </div>
+        <div class="cart__description">
+          <div class="cart__advantag">Free Shipping</div>
+          <div class="cart__advantag__description">
+            Taxes and Discount Calculated at Checkout
+          </div>
+        </div>
+        <a href="#" class="btn cart__btn">Check Out</a>
+      </div>
+    </div>
+  </section>
 
   <!-- jQuery -->
   <script src="./js/include/jquery.min.js"></script>

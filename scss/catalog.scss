@@ -506,6 +506,11 @@
 
   .btn.filter__btn {
     display: flex;
+
+    &--detail {
+      margin-bottom: 35px;
+      margin-left: auto;
+    }
   }
 }
 

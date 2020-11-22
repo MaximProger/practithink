@@ -79,7 +79,7 @@ $(document).ready(function () {
 
   // Cart
   $("#cartClose").click(function () {
-    $(".cart__mask").fadeToggle();
+    $(".mask").fadeToggle();
     $(".cart").animate({ width: "toggle" }, 350);
   });
 
@@ -144,10 +144,11 @@ $(document).ready(function () {
   });
 
   // Close Cart by mask
-  $(".cart__mask").click(function () {
-    $(".cart__mask").fadeOut();
+  $(".mask").click(function () {
+    $(".mask").fadeOut();
     $(".cart").animate({ width: "hide" }, 500);
     $(".filter__active").animate({ width: "hide" }, 350);
+    $(".modal__window").slideUp();
   });
 
   // Cart Item Count
@@ -157,7 +158,7 @@ $(document).ready(function () {
   // Add to cart
   $(".catalog__buy").click(function () {
     // Открытие корзины
-    $(".cart__mask").fadeToggle();
+    $(".mask").fadeToggle();
     $(".cart").animate({ width: "toggle" }, 500);
 
     // Создание и добавление нового элемента
@@ -214,5 +215,21 @@ $(document).ready(function () {
       //   .find(".cart__input")
       //   .val(countCurrentItem + 1);
     }
+  });
+
+  // Modal
+  $(".modal__btn").click(function () {
+    $(".modal__window").slideUp();
+    $(".mask").fadeOut();
+  });
+
+  $("#addReview").click(function () {
+    $(".mask").fadeIn();
+    $(".modal__window--reviews").slideDown();
+  });
+
+  $("#addComments").click(function () {
+    $(".mask").fadeIn();
+    $(".modal__window--comments").slideDown();
   });
 });
