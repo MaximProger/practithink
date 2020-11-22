@@ -83,11 +83,6 @@ $(document).ready(function () {
     $(".cart").animate({ width: "toggle" }, 350);
   });
 
-  $(".catalog__buy").click(function () {
-    $(".cart__mask").fadeToggle();
-    $(".cart").animate({ width: "toggle" }, 350);
-  });
-
   // Итоговая цена
   var $subtotal = $(".cart__total__number");
   var $prices = $(".cart__price__value");
@@ -148,11 +143,76 @@ $(document).ready(function () {
     $subtotal.text(sum);
   });
 
+  // Close Cart by mask
+  $(".cart__mask").click(function () {
+    $(".cart__mask").fadeOut();
+    $(".cart").animate({ width: "hide" }, 500);
+    $(".filter__active").animate({ width: "hide" }, 350);
+  });
+
+  // Cart Item Count
+  let cartItemCount = +$(".cart__item").length;
+  $("#basketCount").text(cartItemCount);
+
   // Add to cart
   $(".catalog__buy").click(function () {
+    // Открытие корзины
+    $(".cart__mask").fadeToggle();
+    $(".cart").animate({ width: "toggle" }, 500);
+
+    // Создание и добавление нового элемента
     let cartItem = $(this).parents(".catalog__item").clone();
-    console.log(cartItem);
+    let cartItemDescription = "by: PractiThink";
     let cartItemTitle = cartItem.find(".catalog__item__title").text();
-    console.log(cartItemTitle);
+    let cartImgSrc = cartItem.find(".catalog__item__img").attr("src");
+    let cartPrice = cartItem.find(".catalog__item__value").text();
+    let cartData = cartItem.attr("id");
+
+    // Если такой элемент уже есть, новый не добавлять
+    if (!$(".cart__item").data("item")) {
+      let cartItemNew = `
+    <div class="cart__item" data-item="${cartData}">
+              <img src="${cartImgSrc}" alt="${cartItemTitle}" class="cart__img">
+              <div class="cart__content">
+                <div class="cart__content__title">${cartItemTitle}</div>
+                <div class="cart__content__description">
+                  ${cartItemDescription}
+                </div>
+                <div class="cart__content__wrapper">
+
+                  <div class="cart__add__item">
+                    <button class="cart__btn cart__btn--less" type="button" disabled>
+                      <svg width="11" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M9.553 16.86c.13 0 .258-.036.367-.103a.623.623 0 00.242-.273.566.566 0 00.038-.352.596.596 0 00-.18-.312L2.356 8.739l7.662-7.081a.585.585 0 00.185-.429.587.587 0 00-.193-.425.688.688 0 00-.46-.179.69.69 0 00-.464.171L.957 8.308a.587.587 0 00-.192.431c0 .162.07.317.193.43l8.129 7.513a.665.665 0 00.214.132.72.72 0 00.252.046z"
+                          fill="#C4C4C4" /></svg>
+                    </button>
+                    <input type="number" class="form-control cart__input" value="1" min="1" name="addcart" id="addcart">
+                    <button class="cart__btn cart__btn--more" type="button">
+                      <svg width="11" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M9.553 16.86c.13 0 .258-.036.367-.103a.623.623 0 00.242-.273.566.566 0 00.038-.352.596.596 0 00-.18-.312L2.356 8.739l7.662-7.081a.585.585 0 00.185-.429.587.587 0 00-.193-.425.688.688 0 00-.46-.179.69.69 0 00-.464.171L.957 8.308a.587.587 0 00-.192.431c0 .162.07.317.193.43l8.129 7.513a.665.665 0 00.214.132.72.72 0 00.252.046z"
+                          fill="#C4C4C4" /></svg>
+                    </button>
+                  </div>
+
+                  <div class="cart__price">$<span class="cart__price__value" data-price="20">${cartPrice}</span></div>
+                </div>
+              </div>
+            </div>
+    `;
+      $(".cart__body").prepend(cartItemNew);
+
+      cartItemCount = +$(".cart__item").length;
+      $("#basketCount").text(cartItemCount);
+    } else {
+      // Иначе, увеличиваем его количество на 1
+      // let countCurrentItem = +$("[" + "data-item=" + cartData + "]")
+      //   .find(".cart__input")
+      //   .val();
+      // $("[" + "data-item=" + cartData + "]")
+      //   .find(".cart__input")
+      //   .val(countCurrentItem + 1);
+    }
   });
 });

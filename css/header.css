@@ -172,6 +172,58 @@
   color: #0e80a4;
 }
 
+/* Header Icons */
+.header__icons__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header__item {
+  position: relative;
+}
+
+.header__circle {
+  position: absolute;
+  top: -25%;
+  right: -25%;
+  background: #5b7c80;
+  height: 16px;
+  width: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 18px;
+}
+
+.header__item:first-child {
+  margin-right: 15px;
+}
+
+.header__item:last-child {
+  margin-right: 25px;
+}
+
+.header__icon {
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.header__icon:focus {
+  outline: none;
+}
+
+.header__inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
 @media (max-width: 1279px) {
   .wrapper {
     max-width: 708px;
@@ -191,6 +243,14 @@
   .button-log-in {
     font-size: 14px;
     padding: 8px 45px;
+  }
+
+  .header__inner {
+    flex-direction: column;
+  }
+
+  .header__icons__wrapper {
+    margin-bottom: 5px;
   }
 }
 @media (max-width: 767px) {
@@ -294,56 +354,26 @@
     right: 10%;
     bottom: 10%;
   }
-}
 
-/* Header Icons */
-.header__icons__wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
+  .header__icons__wrapper {
+    position: absolute;
+    bottom: 20%;
+    right: 0;
+    width: 70%;
+    max-width: 315px;
+    justify-content: center;
+    margin-bottom: 0;
+  }
 
-.header__item {
-  position: relative;
-}
+  .header__item {
+    margin: 0 7.5px;
+  }
 
-.header__circle {
-  position: absolute;
-  top: -25%;
-  right: -25%;
-  background: #5b7c80;
-  height: 16px;
-  width: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  border-radius: 50%;
-  font-weight: 600;
-  font-size: 10px;
-  line-height: 18px;
-}
+  .header__item:last-child {
+    margin-right: 7.5px;
+  }
 
-.header__item:first-child {
-  margin-right: 15px;
-}
-
-.header__item:last-child {
-  margin-right: 25px;
-}
-
-.header__icon {
-  background: none;
-  outline: none;
-  border: none;
-}
-
-.header__icon:focus {
-  outline: none;
-}
-
-.header__inner {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
+  .header__inner {
+    flex-direction: row;
+  }
 }

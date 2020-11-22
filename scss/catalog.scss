@@ -442,3 +442,126 @@
       center;
   }
 }
+
+.btn.filter__btn {
+  display: none;
+}
+
+@media (max-width: $tablet) {
+  .catalog__catalog__wrapper {
+    padding: 0 15px;
+  }
+
+  .catalog__sort {
+    padding-left: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+
+  .catalog__filter {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    height: 100%;
+    width: 70%;
+    max-width: 350px;
+    padding-left: 15px;
+    padding-top: 30px;
+  }
+
+  // .filter__active {
+  //   display: block;
+  // }
+
+  .catalog__filter__wrapper {
+    overflow-y: scroll;
+    height: 100%;
+
+    &::-webkit-scrollbar {
+      width: 4px; /* 1 - вертикальный скроллбар */
+    }
+    &::-webkit-scrollbar {
+      &:horizontal {
+        height: 4px; /* 1 - горизонтальный скроллбар */
+      }
+    }
+    &::-webkit-scrollbar-button {
+      background: #fff; /* 2 - кнопка */
+    }
+    &::-webkit-scrollbar-track {
+      background: #fff; /* 3 - трек */
+    }
+    &::-webkit-scrollbar-track-piece {
+      background: #fff; /* 4 – видимая часть трека */
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #68c2d0;
+      border-radius: 100px;
+    }
+  }
+
+  .btn.filter__btn {
+    display: flex;
+  }
+}
+
+@media (max-width: $mobile) {
+  .pannel__wrapper {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .btn.pannel__btn {
+    width: auto;
+    margin: 0 2.5px;
+    margin-bottom: 10px;
+  }
+
+  .catalog__sort__wrapper {
+    flex-wrap: wrap;
+  }
+
+  .catalog__sort__result {
+    margin-left: 0;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .catalog__special__content {
+    padding-left: 0px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 70%;
+    text-align: center;
+  }
+
+  .catalog__special__value {
+    font-size: 14px;
+  }
+
+  .catalog__special__text {
+    font-size: 14px;
+  }
+
+  .btn.catalog__special__btn {
+    width: 100px;
+    font-size: 14px;
+    height: 30px;
+    margin: 0 auto;
+  }
+
+  .catalog__item__title {
+    font-size: 14px;
+  }
+
+  .btn.catalog__mask__btn {
+    max-width: 100%;
+    width: 120px;
+    font-size: 14px;
+    height: 30px;
+  }
+}

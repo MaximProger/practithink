@@ -10,6 +10,8 @@ body {
   position: relative;
   line-height: 20px;
   font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 input::-webkit-outer-spin-button,

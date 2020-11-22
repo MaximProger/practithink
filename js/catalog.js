@@ -21,6 +21,8 @@ $(document).ready(function () {
   $(".catalog__filter__link").click(function (evt) {
     evt.preventDefault();
     $(this).toggleClass("catalog__filter__link--active");
+    $(".cart__mask").fadeOut();
+    $(".catalog__filter").animate({ width: "hide" }, 350);
   });
 
   // Сортировки
@@ -101,5 +103,12 @@ $(document).ready(function () {
   // Questions
   $(".detail__question__btn").click(function () {
     $(this).parent().toggleClass("detail__question__head--active");
+  });
+
+  // Open Filter
+  $("#openFilter").click(function () {
+    $(".catalog__filter").animate({ width: "toggle" }, 350);
+    $(".catalog__filter").addClass("filter__active");
+    $(".cart__mask").fadeToggle();
   });
 });

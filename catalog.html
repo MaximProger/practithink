@@ -129,7 +129,7 @@
               </button>
             </div>
             <div class="header__item">
-              <span class="header__circle">0</span>
+              <span class="header__circle" id="basketCount">0</span>
               <button type="button" class="header__icon" id="basket">
                 <img src="./images/dest/catalog/basket.svg" alt="Favorite">
               </button>
@@ -239,7 +239,7 @@
             </div>
           </div>
         </div>
-        <div class="catalog__catalog col-8">
+        <div class="catalog__catalog col-lg-8 col-12">
           <div class="catalog__catalog__wrapper">
             <div class="catalog__sort">
               <div class="catalog__sort__wrapper">
@@ -269,9 +269,8 @@
                     <span class="catalog__sort__value">8</span>
                   </div>
                 </div>
-
-
               </div>
+              <button class="btn filter__btn" id="openFilter">Filter</button>
             </div>
 
             <div class="catalog__list">
@@ -280,7 +279,7 @@
                   <h2 class="catalog__list__title">Top 50 activities for your kids</h2>
                   <div class="catalog__list__inner row">
 
-                    <div class="catalog__item col-4">
+                    <div class="catalog__item col-6 col-lg-4" id="cartItemId-1">
                       <div class="catalog__item__wrapper">
                         <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
                       </div>
@@ -295,7 +294,7 @@
                         <span class="catalog__item__grade">
                           Grade 4
                         </span>
-                        <span class="catalog__item__price">$20</span>
+                        <span class="catalog__item__price">$<span class="catalog__item__value">100</span></span>
                       </div>
                       <div class="catalog__mask">
                         <div class="catalog__mask__wrapper">
@@ -308,7 +307,7 @@
                       </div>
                     </div>
 
-                    <div class="catalog__item col-4">
+                    <div class="catalog__item col-6 col-lg-4" id="cartItemId-2">
                       <div class="catalog__item__wrapper">
                         <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
                       </div>
@@ -323,35 +322,7 @@
                         <span class="catalog__item__grade">
                           Grade 4
                         </span>
-                        <span class="catalog__item__price">$20</span>
-                      </div>
-                      <div class="catalog__mask">
-                        <div class="catalog__mask__wrapper">
-                          <button type="button" class="btn catalog__mask__btn catalog__buy">Add to cart</button>
-                          <a href="#" class="btn catalog__mask__btn">See details</a>
-                        </div>
-                      </div>
-                      <div class="catalog__item__favorite">
-                        <span class="catalor__item__heart"></span>
-                      </div>
-                    </div>
-
-                    <div class="catalog__item col-4">
-                      <div class="catalog__item__wrapper">
-                        <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
-                      </div>
-                      <div class="catalog__item__body">
-                        <h3 class="catalog__item__title">Lorem ipsum dolor sit amet.</h3>
-                        <div class="catalog__item__subtitle">
-                          <span class="catalog__author">Author:</span>
-                          <span class="catalog__name">PractiThink</span>
-                        </div>
-                      </div>
-                      <div class="catalog__item__bot">
-                        <span class="catalog__item__grade">
-                          Grade 4
-                        </span>
-                        <span class="catalog__item__price">$20</span>
+                        <span class="catalog__item__price">$<span class="catalog__item__value">100</span></span>
                       </div>
                       <div class="catalog__mask">
                         <div class="catalog__mask__wrapper">
@@ -364,7 +335,7 @@
                       </div>
                     </div>
 
-                    <div class="catalog__item col-4">
+                    <div class="catalog__item col-6 col-lg-4" id="cartItemId-3">
                       <div class="catalog__item__wrapper">
                         <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
                       </div>
@@ -379,7 +350,7 @@
                         <span class="catalog__item__grade">
                           Grade 4
                         </span>
-                        <span class="catalog__item__price">$20</span>
+                        <span class="catalog__item__price">$<span class="catalog__item__value">100</span></span>
                       </div>
                       <div class="catalog__mask">
                         <div class="catalog__mask__wrapper">
@@ -392,7 +363,7 @@
                       </div>
                     </div>
 
-                    <div class="catalog__item col-4">
+                    <div class="catalog__item col-6 col-lg-4" id="cartItemId-4">
                       <div class="catalog__item__wrapper">
                         <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
                       </div>
@@ -407,7 +378,7 @@
                         <span class="catalog__item__grade">
                           Grade 4
                         </span>
-                        <span class="catalog__item__price">$20</span>
+                        <span class="catalog__item__price">$<span class="catalog__item__value">100</span></span>
                       </div>
                       <div class="catalog__mask">
                         <div class="catalog__mask__wrapper">
@@ -416,11 +387,39 @@
                         </div>
                       </div>
                       <div class="catalog__item__favorite">
-                        <span class="catalor__item__heart"></span>
+                        <span class="catalor__item__heart catalor__item__heart--active"></span>
                       </div>
                     </div>
 
-                    <div class="catalog__item catalog__item catalog__item-special col-4">
+                    <div class="catalog__item col-6 col-lg-4" id="cartItemId-5">
+                      <div class="catalog__item__wrapper">
+                        <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
+                      </div>
+                      <div class="catalog__item__body">
+                        <h3 class="catalog__item__title">Lorem ipsum dolor sit amet.</h3>
+                        <div class="catalog__item__subtitle">
+                          <span class="catalog__author">Author:</span>
+                          <span class="catalog__name">PractiThink</span>
+                        </div>
+                      </div>
+                      <div class="catalog__item__bot">
+                        <span class="catalog__item__grade">
+                          Grade 4
+                        </span>
+                        <span class="catalog__item__price">$<span class="catalog__item__value">100</span></span>
+                      </div>
+                      <div class="catalog__mask">
+                        <div class="catalog__mask__wrapper">
+                          <button type="button" class="btn catalog__mask__btn catalog__buy">Add to cart</button>
+                          <a href="#" class="btn catalog__mask__btn">See details</a>
+                        </div>
+                      </div>
+                      <div class="catalog__item__favorite">
+                        <span class="catalor__item__heart catalor__item__heart--active"></span>
+                      </div>
+                    </div>
+
+                    <div class="catalog__item catalog__item catalog__item-special col-6 col-lg-4">
                       <div class="catalog__special__wrapper">
                         <img src="./images/dest/catalog/item--special.png" alt="Product" class="catalog__special__img">
                       </div>
@@ -442,7 +441,7 @@
                   <h2 class="catalog__list__title">Top 50 activities for your kids</h2>
                   <div class="catalog__list__inner row">
 
-                    <div class="catalog__item col-4">
+                    <div class="catalog__item col-6 col-lg-4" id="cartItemId-6">
                       <div class="catalog__item__wrapper">
                         <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
                       </div>
@@ -457,7 +456,7 @@
                         <span class="catalog__item__grade">
                           Grade 4
                         </span>
-                        <span class="catalog__item__price">$20</span>
+                        <span class="catalog__item__price">$<span class="catalog__item__value">100</span></span>
                       </div>
                       <div class="catalog__mask">
                         <div class="catalog__mask__wrapper">
@@ -470,7 +469,7 @@
                       </div>
                     </div>
 
-                    <div class="catalog__item col-4">
+                    <div class="catalog__item col-6 col-lg-4" id="cartItemId-7">
                       <div class="catalog__item__wrapper">
                         <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
                       </div>
@@ -485,7 +484,7 @@
                         <span class="catalog__item__grade">
                           Grade 4
                         </span>
-                        <span class="catalog__item__price">$20</span>
+                        <span class="catalog__item__price">$<span class="catalog__item__value">100</span></span>
                       </div>
                       <div class="catalog__mask">
                         <div class="catalog__mask__wrapper">
@@ -498,7 +497,7 @@
                       </div>
                     </div>
 
-                    <div class="catalog__item col-4">
+                    <div class="catalog__item col-6 col-lg-4" id="cartItemId-8">
                       <div class="catalog__item__wrapper">
                         <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
                       </div>
@@ -513,7 +512,7 @@
                         <span class="catalog__item__grade">
                           Grade 4
                         </span>
-                        <span class="catalog__item__price">$20</span>
+                        <span class="catalog__item__price">$<span class="catalog__item__value">100</span></span>
                       </div>
                       <div class="catalog__mask">
                         <div class="catalog__mask__wrapper">
@@ -526,7 +525,7 @@
                       </div>
                     </div>
 
-                    <div class="catalog__item col-4">
+                    <div class="catalog__item col-6 col-lg-4" id="cartItemId-9">
                       <div class="catalog__item__wrapper">
                         <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
                       </div>
@@ -541,7 +540,7 @@
                         <span class="catalog__item__grade">
                           Grade 4
                         </span>
-                        <span class="catalog__item__price">$20</span>
+                        <span class="catalog__item__price">$<span class="catalog__item__value">100</span></span>
                       </div>
                       <div class="catalog__mask">
                         <div class="catalog__mask__wrapper">
@@ -554,7 +553,7 @@
                       </div>
                     </div>
 
-                    <div class="catalog__item col-4">
+                    <div class="catalog__item col-6 col-lg-4" id="cartItemId-10">
                       <div class="catalog__item__wrapper">
                         <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
                       </div>
@@ -569,7 +568,7 @@
                         <span class="catalog__item__grade">
                           Grade 4
                         </span>
-                        <span class="catalog__item__price">$20</span>
+                        <span class="catalog__item__price">$<span class="catalog__item__value">100</span></span>
                       </div>
                       <div class="catalog__mask">
                         <div class="catalog__mask__wrapper">
@@ -582,7 +581,7 @@
                       </div>
                     </div>
 
-                    <div class="catalog__item catalog__item catalog__item-special col-4">
+                    <div class="catalog__item catalog__item catalog__item-special col-6 col-lg-4">
                       <div class="catalog__special__wrapper">
                         <img src="./images/dest/catalog/item--special.png" alt="Product" class="catalog__special__img">
                       </div>
@@ -607,7 +606,7 @@
       </div>
     </div>
 
-    <!-- <div class="cart__mask"></div>
+    <div class="cart__mask"></div>
     <section class="cart">
       <div class="cart__wrapper">
         <div class="cart__inner">
@@ -731,7 +730,7 @@
           <a href="#" class="btn cart__btn">Check Out</a>
         </div>
       </div>
-    </section> -->
+    </section>
 
   </main>
 
