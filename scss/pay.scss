@@ -1,0 +1,168 @@
+@import "config";
+
+.pay {
+  padding-bottom: 120px;
+
+  .container {
+    max-width: 1130px;
+  }
+}
+
+.pay__list {
+  min-height: 58.5vh;
+}
+
+.pay__title {
+  margin-bottom: 10px;
+}
+
+.pay__list__item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-bottom: 51px;
+  margin-bottom: 35px;
+  border-bottom: 1px solid #c4c4c4;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.pay__img {
+  width: 130px;
+  height: 130px;
+  max-width: 130px;
+  max-height: 130px;
+  margin-right: 27px;
+}
+
+.pay__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pay__title {
+  font-weight: bold;
+}
+
+.pay__delite {
+  background: none;
+  border: none;
+  transition: all 0.2s linear;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.pay__rating {
+  .detail__rating__wrapper {
+    margin-top: 0;
+  }
+}
+
+.pay__description {
+  color: #5a5a5a;
+  margin-top: 16px;
+  margin-bottom: 23px;
+}
+
+.pay__bot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pay__right {
+  margin-top: 0;
+  width: 40%;
+}
+
+.pay__left__first {
+  font-weight: bold;
+  margin-right: 23px;
+}
+
+.pay__left__second {
+  b {
+    font-weight: bold;
+  }
+}
+
+.pay__buy {
+  padding: 36px 46px;
+  margin-bottom: 0;
+  text-align: center;
+  height: auto;
+  width: 100%;
+
+  .detail__buy__wrapper {
+    width: 100%;
+  }
+
+  .btn.detail__buy__btn {
+    width: 100%;
+  }
+
+  .cart__bottom__line {
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+    margin-bottom: 34px;
+  }
+
+  .detail__buy__wish {
+    margin-top: 21px;
+    margin-bottom: 15px;
+  }
+
+  .pay__link {
+    font-size: 14px;
+    line-height: 19px;
+    color: #1d88a9;
+    border-bottom: 1px solid #1d88a9;
+    transition: all 0.2s linear;
+
+    &:hover {
+      border-color: transparent;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .pay__side {
+    margin-top: 35px;
+  }
+
+  .pay__buy {
+    padding: 25px 46px;
+
+    .cart__bottom__line {
+      margin-bottom: 20px;
+    }
+  }
+
+  .pay__bot {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pay__left {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .pay__left__first {
+    margin-bottom: 5px;
+    margin-right: 0;
+  }
+
+  .pay__right {
+    flex-direction: row;
+    margin-top: 10px;
+    width: 100%;
+  }
+}

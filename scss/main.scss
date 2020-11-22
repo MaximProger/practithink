@@ -2,6 +2,7 @@
 @import "catalog";
 @import "detail";
 @import "cart";
+@import "pay";
 
 body {
   min-width: 320px;
@@ -83,6 +84,14 @@ label {
     background: #fff;
     border-color: #fff;
   }
+}
+
+.section__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  color: #369cb7;
+  margin-bottom: 10px;
 }
 
 // Info

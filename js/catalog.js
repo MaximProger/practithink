@@ -136,4 +136,9 @@ $(document).ready(function () {
       $(".rating__item__value").text("1.0 Unsatisfactory");
     }
   });
+
+  // Pay Item Delite
+  $(".pay__delite").click(function () {
+    $(this).parents(".pay__list__item").slideUp();
+  });
 });
