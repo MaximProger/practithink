@@ -3,6 +3,7 @@
 @import "detail";
 @import "cart";
 @import "pay";
+@import "purchase";
 
 body {
   min-width: 320px;
@@ -83,6 +84,11 @@ label {
     color: #68c2d0;
     background: #fff;
     border-color: #fff;
+  }
+
+  &--opacity {
+    background: none;
+    color: #0e80a4;
   }
 }
 
