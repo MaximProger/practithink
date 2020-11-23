@@ -433,10 +433,9 @@
   width: 16.29px;
   height: 14.11px;
   background: url("../images/dest/catalog/favorite.svg") no-repeat center;
-  transition: background 0.2s linear;
+  transition: all 0.2s ease;
   cursor: pointer;
 
-  &:hover,
   &--active {
     background: url("../images/dest/catalog/favorite--active.svg") no-repeat
       center;

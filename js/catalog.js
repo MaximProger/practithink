@@ -22,7 +22,7 @@ $(document).ready(function () {
     evt.preventDefault();
     $(this).toggleClass("catalog__filter__link--active");
     $(".mask").fadeOut();
-    $(".catalog__filter").animate({ width: "hide" }, 350);
+    $(".filter__active").animate({ width: "hide" }, 350);
   });
 
   // Сортировки
@@ -140,5 +140,101 @@ $(document).ready(function () {
   // Pay Item Delite
   $(".pay__delite").click(function () {
     $(this).parents(".pay__list__item").slideUp();
+  });
+
+  // Likes && Dislikes
+
+  let isLike = false;
+  let isDislike = false;
+  let likeValue;
+  let dislikeValue;
+
+  $(".detail__like--like").click(function () {
+    if (!isLike) {
+      isLike = true;
+      $(this).addClass("detail__like--active");
+      likeValue = +$(this).parent().find(".detail__like__value--like").text();
+      $(this)
+        .parent()
+        .find(".detail__like__value--like")
+        .text(likeValue + 1);
+
+      if (isDislike) {
+        isDislike = false;
+
+        dislikeValue = +$(this)
+          .parents(".detail__like__wrapper")
+          .find(".detail__like__value--dislike")
+          .text();
+
+        $(this)
+          .parents(".detail__like__wrapper")
+          .find(".detail__like__value--dislike")
+          .text(dislikeValue - 1);
+
+        $(this)
+          .parents(".detail__like__wrapper")
+          .find(".detail__like--dislike")
+          .removeClass("detail__like--active");
+      }
+    } else {
+      isLike = false;
+      likeValue = +$(this).parent().find(".detail__like__value--like").text();
+      $(this)
+        .parent()
+        .find(".detail__like__value--like")
+        .text(likeValue - 1);
+      $(this).removeClass("detail__like--active");
+    }
+  });
+
+  $(".detail__like--dislike").click(function () {
+    if (!isDislike) {
+      isDislike = true;
+      $(this).addClass("detail__like--active");
+      dislikeValue = +$(this)
+        .parent()
+        .find(".detail__like__value--dislike")
+        .text();
+      $(this)
+        .parent()
+        .find(".detail__like__value--dislike")
+        .text(dislikeValue + 1);
+
+      if (isLike) {
+        isLike = false;
+
+        likeValue = +$(this)
+          .parents(".detail__like__wrapper")
+          .find(".detail__like__value--like")
+          .text();
+
+        $(this)
+          .parents(".detail__like__wrapper")
+          .find(".detail__like__value--like")
+          .text(likeValue - 1);
+
+        $(this)
+          .parents(".detail__like__wrapper")
+          .find(".detail__like--like")
+          .removeClass("detail__like--active");
+      }
+    } else {
+      isDislike = false;
+      dislikeValue = +$(this)
+        .parent()
+        .find(".detail__like__value--dislike")
+        .text();
+      $(this)
+        .parent()
+        .find(".detail__like__value--dislike")
+        .text(dislikeValue - 1);
+      $(this).removeClass("detail__like--active");
+    }
+  });
+
+  // Add to Wish List
+  $(".detail__heart").click(function () {
+    $(this).toggleClass("detail__heart--active");
   });
 });

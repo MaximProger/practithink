@@ -83,21 +83,24 @@ $(document).ready(function () {
     $(".cart").animate({ width: "toggle" }, 350);
   });
 
-  // Итоговая цена
+  // Total Price
   var $subtotal = $(".cart__total__number");
-  var $prices = $(".cart__price__value");
-  var sum = 0;
 
-  $prices.each(function () {
-    sum += parseInt($(this).text());
-  });
+  function totalPrice() {
+    var $prices = $(".cart__price__value");
+    var sum = 0;
 
-  $subtotal.text(sum);
+    $prices.each(function () {
+      sum += parseInt($(this).text());
+    });
 
-  let defaulPrice;
-  let finshPrice;
+    $subtotal.text(sum);
+  }
+
+  let defaultPrice;
+  let finishPrice;
   // Увеличиваем счетчик товаров (корзина)
-  $(".cart__btn--more").click(function (evt) {
+  $(".cart__body").on("click", ".cart__btn--more", function (evt) {
     evt.preventDefault();
     $(this)
       .parent()
@@ -105,25 +108,20 @@ $(document).ready(function () {
       .val(+$(this).parent().find(".cart__input").val() + 1);
     $(this).parent().find(".cart__btn--less").prop("disabled", false);
     // Цена 1-го товара
-    defaulPrice = +$(this)
+    defaultPrice = +$(this)
       .parent()
       .parent()
       .find(".cart__price__value")
       .data("price");
     // Цена * количество
-    finshPrice = defaulPrice * +$(this).parent().find(".cart__input").val();
-    $(this).parent().parent().find(".cart__price__value").text(finshPrice);
+    finishPrice = defaultPrice * +$(this).parent().find(".cart__input").val();
+    $(this).parent().parent().find(".cart__price__value").text(finishPrice);
 
-    sum = 0;
-    $prices.each(function () {
-      sum += parseInt($(this).text());
-    });
-
-    $subtotal.text(sum);
+    totalPrice();
   });
 
   // Уменьшаем счетчик товаров (корзина)
-  $(".cart__btn--less").click(function (evt) {
+  $(".cart__body").on("click", ".cart__btn--less", function (evt) {
     evt.preventDefault();
     $(this)
       .parent()
@@ -132,15 +130,10 @@ $(document).ready(function () {
     if ($(this).parent().find(".cart__input").val() <= 1)
       $(this).prop("disabled", true);
 
-    finshPrice = defaulPrice * +$(this).parent().find(".cart__input").val();
-    $(this).parent().parent().find(".cart__price__value").text(finshPrice);
+    finishPrice = defaultPrice * +$(this).parent().find(".cart__input").val();
+    $(this).parent().parent().find(".cart__price__value").text(finishPrice);
 
-    sum = 0;
-    $prices.each(function () {
-      sum += parseInt($(this).text());
-    });
-
-    $subtotal.text(sum);
+    totalPrice();
   });
 
   // Close Cart by mask
@@ -167,12 +160,12 @@ $(document).ready(function () {
     let cartItemTitle = cartItem.find(".catalog__item__title").text();
     let cartImgSrc = cartItem.find(".catalog__item__img").attr("src");
     let cartPrice = cartItem.find(".catalog__item__value").text();
-    let cartData = cartItem.attr("id");
+    let cartID = cartItem.attr("id");
 
     // Если такой элемент уже есть, новый не добавлять
-    if (!$(".cart__item").data("item")) {
+    if (!$(".cart__body").children("#" + cartID).length > 0) {
       let cartItemNew = `
-    <div class="cart__item" data-item="${cartData}">
+    <div class="cart__item" id="${cartID}">
               <img src="${cartImgSrc}" alt="${cartItemTitle}" class="cart__img">
               <div class="cart__content">
                 <div class="cart__content__title">${cartItemTitle}</div>
@@ -208,13 +201,36 @@ $(document).ready(function () {
       $("#basketCount").text(cartItemCount);
     } else {
       // Иначе, увеличиваем его количество на 1
-      // let countCurrentItem = +$("[" + "data-item=" + cartData + "]")
-      //   .find(".cart__input")
-      //   .val();
-      // $("[" + "data-item=" + cartData + "]")
-      //   .find(".cart__input")
-      //   .val(countCurrentItem + 1);
+      let cartItemCount = +$(".cart__body")
+        .children("#" + cartID)
+        .find(".cart__input")
+        .val();
+      $(".cart__body")
+        .children("#" + cartID)
+        .find(".cart__input")
+        .val(cartItemCount + 1);
+
+      defaultPrice = +cartPrice;
+      // Цена * количество
+      finishPrice =
+        defaultPrice *
+        +$(".cart__body")
+          .children("#" + cartID)
+          .find(".cart__input")
+          .val();
+
+      $(".cart__body")
+        .children("#" + cartID)
+        .find(".cart__price__value")
+        .text(finishPrice);
+
+      $(".cart__body")
+        .children("#" + cartID)
+        .find(".cart__btn--less")
+        .prop("disabled", false);
     }
+
+    totalPrice();
   });
 
   // Modal

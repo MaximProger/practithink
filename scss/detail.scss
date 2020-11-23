@@ -555,12 +555,12 @@
 }
 
 .detail__like__item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
   &--dislike {
     margin-left: 15px;
-
-    .detail__like {
-      transform: rotate(180deg) scale(-1, 1);
-    }
   }
 }
 
@@ -578,10 +578,34 @@
   &:hover {
     opacity: 0.7;
   }
+
+  &--active {
+    .detail__like__img {
+      background: url("../images/dest/detail/like--active.svg") no-repeat center;
+
+      &--dislike {
+        background: url("../images/dest/detail/deslike--active.svg") no-repeat
+          center;
+      }
+    }
+  }
+}
+
+.detail__like__img {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: url("../images/dest/detail/like.svg") no-repeat center;
+
+  &--dislike {
+    background: url("../images/dest/detail/deslike.svg") no-repeat center;
+  }
 }
 
 .detail__like__value {
+  display: inline-block;
   color: #000000;
+  margin-left: 5px;
 }
 
 .detail__like__wrapper {
