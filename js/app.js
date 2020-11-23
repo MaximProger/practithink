@@ -97,6 +97,8 @@ $(document).ready(function () {
     $subtotal.text(sum);
   }
 
+  totalPrice();
+
   let defaultPrice;
   let finishPrice;
   // Увеличиваем счетчик товаров (корзина)
@@ -122,6 +124,43 @@ $(document).ready(function () {
 
   // Уменьшаем счетчик товаров (корзина)
   $(".cart__body").on("click", ".cart__btn--less", function (evt) {
+    evt.preventDefault();
+    $(this)
+      .parent()
+      .find(".cart__input")
+      .val(+$(this).parent().find(".cart__input").val() - 1);
+    if ($(this).parent().find(".cart__input").val() <= 1)
+      $(this).prop("disabled", true);
+
+    finishPrice = defaultPrice * +$(this).parent().find(".cart__input").val();
+    $(this).parent().parent().find(".cart__price__value").text(finishPrice);
+
+    totalPrice();
+  });
+
+  // Увеличиваем счетчик товаров (страница оплатаы)
+  $(".pay__list").on("click", ".cart__btn--more", function (evt) {
+    evt.preventDefault();
+    $(this)
+      .parent()
+      .find(".cart__input")
+      .val(+$(this).parent().find(".cart__input").val() + 1);
+    $(this).parent().find(".cart__btn--less").prop("disabled", false);
+    // Цена 1-го товара
+    defaultPrice = +$(this)
+      .parent()
+      .parent()
+      .find(".cart__price__value")
+      .data("price");
+    // Цена * количество
+    finishPrice = defaultPrice * +$(this).parent().find(".cart__input").val();
+    $(this).parent().parent().find(".cart__price__value").text(finishPrice);
+
+    totalPrice();
+  });
+
+  // Уменьшаем счетчик товаров (страница оплатаы)
+  $(".pay__list").on("click", ".cart__btn--less", function (evt) {
     evt.preventDefault();
     $(this)
       .parent()
