@@ -144,14 +144,13 @@ $(document).ready(function () {
 
   // Likes && Dislikes
 
-  let isLike = false;
-  let isDislike = false;
+  // let isLike = false;
+  // let isDislike = false;
   let likeValue;
   let dislikeValue;
 
   $(".detail__like--like").click(function () {
-    if (!isLike) {
-      isLike = true;
+    if (!$(this).hasClass("detail__like--active")) {
       $(this).addClass("detail__like--active");
       likeValue = +$(this).parent().find(".detail__like__value--like").text();
       $(this)
@@ -159,9 +158,12 @@ $(document).ready(function () {
         .find(".detail__like__value--like")
         .text(likeValue + 1);
 
-      if (isDislike) {
-        isDislike = false;
-
+      if (
+        $(this)
+          .parents(".detail__like__wrapper")
+          .find(".detail__like--dislike")
+          .hasClass("detail__like--active")
+      ) {
         dislikeValue = +$(this)
           .parents(".detail__like__wrapper")
           .find(".detail__like__value--dislike")
@@ -178,7 +180,6 @@ $(document).ready(function () {
           .removeClass("detail__like--active");
       }
     } else {
-      isLike = false;
       likeValue = +$(this).parent().find(".detail__like__value--like").text();
       $(this)
         .parent()
@@ -189,8 +190,7 @@ $(document).ready(function () {
   });
 
   $(".detail__like--dislike").click(function () {
-    if (!isDislike) {
-      isDislike = true;
+    if (!$(this).hasClass("detail__like--active")) {
       $(this).addClass("detail__like--active");
       dislikeValue = +$(this)
         .parent()
@@ -201,9 +201,12 @@ $(document).ready(function () {
         .find(".detail__like__value--dislike")
         .text(dislikeValue + 1);
 
-      if (isLike) {
-        isLike = false;
-
+      if (
+        $(this)
+          .parents(".detail__like__wrapper")
+          .find(".detail__like--like")
+          .hasClass("detail__like--active")
+      ) {
         likeValue = +$(this)
           .parents(".detail__like__wrapper")
           .find(".detail__like__value--like")
@@ -220,7 +223,6 @@ $(document).ready(function () {
           .removeClass("detail__like--active");
       }
     } else {
-      isDislike = false;
       dislikeValue = +$(this)
         .parent()
         .find(".detail__like__value--dislike")
