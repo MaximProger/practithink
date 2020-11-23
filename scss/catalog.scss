@@ -105,19 +105,37 @@
   width: auto;
   margin-right: 14px;
   margin-bottom: 5px;
+  transition: all 0.2s ease;
 
   &:last-child {
     margin-right: 0;
   }
 
-  &--active,
+  &:active,
   &:hover {
+    background: #ecf7f9;
+    color: #0e80a4;
+    border-color: #ecf7f9;
+    opacity: 0.7;
+  }
+
+  &--active {
     color: #fff;
     background: #0e80a4;
     border-color: #0e80a4;
 
     .pannel__icon {
       background: url("../images/dest/catalog/ok.svg") no-repeat center;
+    }
+
+    &:hover {
+      color: #fff;
+      background: #0e80a4;
+      border-color: #0e80a4;
+
+      .pannel__icon {
+        background: url("../images/dest/catalog/ok.svg") no-repeat center;
+      }
     }
   }
 }
@@ -185,7 +203,7 @@
   }
 
   &--active {
-    color: #68c2d0;
+    color: #0e80a4;
     font-weight: bold;
   }
 

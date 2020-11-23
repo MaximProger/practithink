@@ -805,6 +805,13 @@
     flex-direction: column;
   }
 
+  .filter__btn {
+    display: none !important;
+    &.filter--active {
+      display: block !important;
+    }
+  }
+
   .detail__intro__content {
     margin-top: 15px;
     margin-left: 0;

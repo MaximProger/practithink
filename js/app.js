@@ -172,11 +172,13 @@ $(document).ready(function () {
       .parent()
       .find(".cart__input")
       .val(+$(this).parent().find(".cart__input").val() - 1);
-    if ($(this).parent().find(".cart__input").val() <= 1)
-      $(this).prop("disabled", true);
-
-    finishPrice = defaultPrice * +$(this).parent().find(".cart__input").val();
-    $(this).parent().parent().find(".cart__price__value").text(finishPrice);
+    if ($(this).parent().find(".cart__input").val() == 0) {
+      $(this).parents(".pay__list__item").slideUp();
+      $(this).parent().parent().find(".cart__price__value").text(0);
+    } else {
+      finishPrice = defaultPrice * +$(this).parent().find(".cart__input").val();
+      $(this).parent().parent().find(".cart__price__value").text(finishPrice);
+    }
 
     totalPrice();
   });

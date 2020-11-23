@@ -62,9 +62,9 @@ $(document).ready(function () {
     );
 
     if (currentID != "item") {
-      $("#openFilter").hide();
+      $("#openFilter").removeClass("filter--active");
     } else {
-      $("#openFilter").show();
+      $("#openFilter").addClass("filter--active");
     }
   });
 
@@ -107,9 +107,9 @@ $(document).ready(function () {
   });
 
   // Questions
-  $(".detail__question__btn").click(function () {
+  $(".detail__question__head").click(function () {
     $(".detail__question__head").removeClass("detail__question__head--active");
-    $(this).parent().addClass("detail__question__head--active");
+    $(this).addClass("detail__question__head--active");
   });
 
   // Open Filter
