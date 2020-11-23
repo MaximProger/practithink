@@ -60,6 +60,12 @@ $(document).ready(function () {
     $("[data-nav=" + currentID + "]").addClass(
       "detail__section__hidden--active"
     );
+
+    if (currentID != "item") {
+      $("#openFilter").hide();
+    } else {
+      $("#openFilter").show();
+    }
   });
 
   // Preview Slider
@@ -102,7 +108,8 @@ $(document).ready(function () {
 
   // Questions
   $(".detail__question__btn").click(function () {
-    $(this).parent().toggleClass("detail__question__head--active");
+    $(".detail__question__head").removeClass("detail__question__head--active");
+    $(this).parent().addClass("detail__question__head--active");
   });
 
   // Open Filter
@@ -238,5 +245,10 @@ $(document).ready(function () {
   // Add to Wish List
   $(".detail__heart").click(function () {
     $(this).toggleClass("detail__heart--active");
+  });
+
+  // Checkbox && pannel
+  $(".pannel__switch .custom-control-input").change(function () {
+    $(".pannel__wrapper").toggleClass("pannel__wrapper--active");
   });
 });

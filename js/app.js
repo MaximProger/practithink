@@ -129,11 +129,17 @@ $(document).ready(function () {
       .parent()
       .find(".cart__input")
       .val(+$(this).parent().find(".cart__input").val() - 1);
-    if ($(this).parent().find(".cart__input").val() <= 1)
-      $(this).prop("disabled", true);
 
-    finishPrice = defaultPrice * +$(this).parent().find(".cart__input").val();
-    $(this).parent().parent().find(".cart__price__value").text(finishPrice);
+    if ($(this).parent().find(".cart__input").val() == 0) {
+      $(this).parents(".cart__item").remove();
+      $(this).parent().parent().find(".cart__price__value").text(0);
+      // Cart Item Count
+      let cartItemCount = +$(".cart__item").length;
+      $(".basketCount").text(cartItemCount);
+    } else {
+      finishPrice = defaultPrice * +$(this).parent().find(".cart__input").val();
+      $(this).parent().parent().find(".cart__price__value").text(finishPrice);
+    }
 
     totalPrice();
   });
@@ -185,7 +191,7 @@ $(document).ready(function () {
 
   // Cart Item Count
   let cartItemCount = +$(".cart__item").length;
-  $("#basketCount").text(cartItemCount);
+  $(".basketCount").text(cartItemCount);
 
   // Add to cart
   $(".catalog__buy").click(function () {
@@ -214,7 +220,7 @@ $(document).ready(function () {
                 <div class="cart__content__wrapper">
 
                   <div class="cart__add__item">
-                    <button class="cart__btn cart__btn--less" type="button" disabled>
+                    <button class="cart__btn cart__btn--less" type="button">
                       <svg width="11" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                           d="M9.553 16.86c.13 0 .258-.036.367-.103a.623.623 0 00.242-.273.566.566 0 00.038-.352.596.596 0 00-.18-.312L2.356 8.739l7.662-7.081a.585.585 0 00.185-.429.587.587 0 00-.193-.425.688.688 0 00-.46-.179.69.69 0 00-.464.171L.957 8.308a.587.587 0 00-.192.431c0 .162.07.317.193.43l8.129 7.513a.665.665 0 00.214.132.72.72 0 00.252.046z"
@@ -237,7 +243,7 @@ $(document).ready(function () {
       $(".cart__body").prepend(cartItemNew);
 
       cartItemCount = +$(".cart__item").length;
-      $("#basketCount").text(cartItemCount);
+      $(".basketCount").text(cartItemCount);
     } else {
       // Иначе, увеличиваем его количество на 1
       let cartItemCount = +$(".cart__body")
@@ -286,5 +292,10 @@ $(document).ready(function () {
   $("#addComments").click(function () {
     $(".mask").fadeIn();
     $(".modal__window--comments").slideDown();
+  });
+
+  $("#addAsk").click(function () {
+    $(".mask").fadeIn();
+    $(".modal__window--questions").slideDown();
   });
 });

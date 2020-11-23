@@ -33,10 +33,20 @@
   }
 }
 
+.cart__title__wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
 .cart__title {
   font-weight: bold;
   font-size: 18px;
   line-height: 25px;
+}
+
+.cart__title__item {
+  margin-left: 7.5px;
 }
 
 .cart__wrapper {
@@ -49,6 +59,15 @@
 .cart__head {
   position: relative;
   margin-bottom: 30px;
+}
+
+.cart__bottom {
+  box-shadow: 0 -10px 10px -4px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  padding-top: 35px;
+  margin-top: 15px;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .cart__close {

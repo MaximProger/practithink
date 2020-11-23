@@ -129,7 +129,7 @@
               </button>
             </div>
             <div class="header__item">
-              <span class="header__circle" id="basketCount">0</span>
+              <span class="header__circle basketCount">0</span>
               <a href="./purchase.html" class="header__icon" id="basket">
                 <img src="./images/dest/catalog/basket.svg" alt="Favorite">
               </a>
@@ -154,14 +154,17 @@
             </div>
           </div>
         </div>
+        <div class="pannel__wrapper pannel__wrapper--active">
+          <button type="button" class="btn pannel__btn"><span class="pannel__icon"></span>2-3grade</button>
+          <button type="button" class="btn pannel__btn"><span class="pannel__icon"></span>fraction</button>
+          <button type="button" class="btn pannel__btn"><span class="pannel__icon"></span>Decimals</button>
+          <button type="button" class="btn pannel__btn"><span class="pannel__icon"></span>Mixed types</button>
+        </div>
         <div class="pannel__wrapper">
-          <button type="button" class="btn pannel__btn">2-3 years</button>
-          <button type="button" class="btn pannel__btn">2-3 years</button>
-          <button type="button" class="btn pannel__btn">2-3 years</button>
-          <button type="button" class="btn pannel__btn">2-3 years</button>
-          <button type="button" class="btn pannel__btn">2-3 years</button>
-          <button type="button" class="btn pannel__btn">2-3 years</button>
-          <button type="button" class="btn pannel__btn">2-3 years</button>
+          <button type="button" class="btn pannel__btn"><span class="pannel__icon"></span>Decimals</button>
+          <button type="button" class="btn pannel__btn"><span class="pannel__icon"></span>Mixed types</button>
+          <button type="button" class="btn pannel__btn"><span class="pannel__icon"></span>2-3grade</button>
+          <button type="button" class="btn pannel__btn"><span class="pannel__icon"></span>fraction</button>
         </div>
       </div>
     </div>
@@ -181,422 +184,426 @@
 
 
     <div class="catalog__body">
-      <div class="catalog__body__inner row">
-        <div class="catalog__filter col-4" id="filter">
-          <div class="catalog__filter__wrapper">
-            <div class="catalog__filter__group">
-              <h3 class="catalog__filter__title">Ages</h3>
-              <div class="catalog__filter__link__wrapper">
-                <a href="#" class="catalog__filter__link catalog__filter__link--active">2 - 3 Years</a>
-                <a href="#" class="catalog__filter__link">4 - 5 years</a>
-                <a href="#" class="catalog__filter__link">6 - 7 Years</a>
-                <a href="#" class="catalog__filter__link">8 - 9 Years</a>
-                <a href="#" class="catalog__filter__link">10 - 11 Years</a>
-                <a href="#" class="catalog__filter__link">12 Years</a>
-                <a href="#" class="catalog__filter__link">Teens</a>
+      <div class="container">
+        <div class="catalog__body__inner row">
+          <div class="catalog__filter col-3" id="filter">
+            <div class="catalog__filter__wrapper">
+              <div class="catalog__filter__group">
+                <h3 class="catalog__filter__title">Ages</h3>
+                <div class="catalog__filter__link__wrapper">
+                  <a href="#" class="catalog__filter__link catalog__filter__link--active">2 - 3 Years</a>
+                  <a href="#" class="catalog__filter__link">4 - 5 years</a>
+                  <a href="#" class="catalog__filter__link">6 - 7 Years</a>
+                  <a href="#" class="catalog__filter__link">8 - 9 Years</a>
+                  <a href="#" class="catalog__filter__link">10 - 11 Years</a>
+                  <a href="#" class="catalog__filter__link">12 Years</a>
+                  <a href="#" class="catalog__filter__link">Teens</a>
+                </div>
+                <div class="catalog__filter__line"></div>
               </div>
-              <div class="catalog__filter__line"></div>
-            </div>
 
-            <div class="catalog__filter__group">
-              <h3 class="catalog__filter__title">Special values</h3>
-              <div class="catalog__filter__link__wrapper">
-                <a href="#" class="catalog__filter__link">Young Reader Paperbacks</a>
-                <a href="#" class="catalog__filter__link">Board Books: Buy One</a>
-                <a href="#" class="catalog__filter__link">Kids' Book Value Offer</a>
-                <a href="#" class="catalog__filter__link">PT Collectible Editions</a>
-                <a href="#" class="catalog__filter__link">PT Exclusives</a>
+              <div class="catalog__filter__group">
+                <h3 class="catalog__filter__title">Special values</h3>
+                <div class="catalog__filter__link__wrapper">
+                  <a href="#" class="catalog__filter__link">Young Reader Paperbacks</a>
+                  <a href="#" class="catalog__filter__link">Board Books: Buy One</a>
+                  <a href="#" class="catalog__filter__link">Kids' Book Value Offer</a>
+                  <a href="#" class="catalog__filter__link">PT Collectible Editions</a>
+                  <a href="#" class="catalog__filter__link">PT Exclusives</a>
+                </div>
+                <div class="catalog__filter__line"></div>
               </div>
-              <div class="catalog__filter__line"></div>
-            </div>
 
-            <div class="catalog__filter__group">
-              <h3 class="catalog__filter__title">Personalized books</h3>
-              <div class="catalog__filter__link__wrapper">
-                <a href="#" class="catalog__filter__link">Signed Books</a>
-                <a href="#" class="catalog__filter__link">See All Special Values for Kids</a>
+              <div class="catalog__filter__group">
+                <h3 class="catalog__filter__title">Personalized books</h3>
+                <div class="catalog__filter__link__wrapper">
+                  <a href="#" class="catalog__filter__link">Signed Books</a>
+                  <a href="#" class="catalog__filter__link">See All Special Values for Kids</a>
+                </div>
+                <div class="catalog__filter__line"></div>
               </div>
-              <div class="catalog__filter__line"></div>
-            </div>
-            <div class="catalog__filter__group">
-              <h3 class="catalog__filter__title">Top collections</h3>
-              <div class="catalog__filter__link__wrapper">
-                <a href="#" class="catalog__filter__link">Award Winners</a>
-                <a href="#" class="catalog__filter__link">Diary of a Wimpy Kid</a>
-                <a href="#" class="catalog__filter__link">Dr. Seuss</a>
-                <a href="#" class="catalog__filter__link">Graphic Novels for Kids</a>
-                <a href="#" class="catalog__filter__link">Harry Potter</a>
-                <a href="#" class="catalog__filter__link">Kids' Classics</a>
-                <a href="#" class="catalog__filter__link">Magic Tree House</a>
-                <a href="#" class="catalog__filter__link">Page & Screen for Kids</a>
-                <a href="#" class="catalog__filter__link">Peppa Pig</a>
-                <a href="#" class="catalog__filter__link">Picture Books</a>
-                <a href="#" class="catalog__filter__link">Rick Riordan</a>
-                <a href="#" class="catalog__filter__link">A Series of Unfortunate Events</a>
-                <a href="#" class="catalog__filter__link">STEAM/STEM Books & Toys</a>
-                <a href="#" class="catalog__filter__link">Warriors by Erin Hunter</a>
+              <div class="catalog__filter__group">
+                <h3 class="catalog__filter__title">Top collections</h3>
+                <div class="catalog__filter__link__wrapper">
+                  <a href="#" class="catalog__filter__link">Award Winners</a>
+                  <a href="#" class="catalog__filter__link">Diary of a Wimpy Kid</a>
+                  <a href="#" class="catalog__filter__link">Dr. Seuss</a>
+                  <a href="#" class="catalog__filter__link">Graphic Novels for Kids</a>
+                  <a href="#" class="catalog__filter__link">Harry Potter</a>
+                  <a href="#" class="catalog__filter__link">Kids' Classics</a>
+                  <a href="#" class="catalog__filter__link">Magic Tree House</a>
+                  <a href="#" class="catalog__filter__link">Page & Screen for Kids</a>
+                  <a href="#" class="catalog__filter__link">Peppa Pig</a>
+                  <a href="#" class="catalog__filter__link">Picture Books</a>
+                  <a href="#" class="catalog__filter__link">Rick Riordan</a>
+                  <a href="#" class="catalog__filter__link">A Series of Unfortunate Events</a>
+                  <a href="#" class="catalog__filter__link">STEAM/STEM Books & Toys</a>
+                  <a href="#" class="catalog__filter__link">Warriors by Erin Hunter</a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="catalog__catalog col-lg-8 col-12">
-          <div class="catalog__catalog__wrapper">
-            <div class="catalog__sort">
-              <div class="catalog__sort__wrapper">
-                <span class="catalog__sort__result">1 - 20 of 95 results</span>
-                <div class="catalog__sort__filter">
-                  <div class="catalog__filter__default">Sort by:</div>
-                  <div class="catalog__sort__inner">
-                    <span class="catalog__sort__text">Price</span>
-                    <img src="./images/dest/catalog/sort__arrow.svg" alt="Arrow" class="catalog__sort__arrow">
+          <div class="catalog__catalog col-lg-9 col-12">
+            <div class="catalog__catalog__wrapper">
+              <div class="catalog__sort">
+                <div class="catalog__sort__wrapper">
+                  <span class="catalog__sort__result">1 - 20 of 95 results</span>
+                  <div class="catalog__sort__filter">
+                    <div class="catalog__filter__default">Sort by:</div>
+                    <div class="catalog__sort__inner">
+                      <span class="catalog__sort__text">Price</span>
+                      <img src="./images/dest/catalog/sort__arrow.svg" alt="Arrow" class="catalog__sort__arrow">
+                    </div>
+                    <div class="catalog__sort__list">
+                      <span class="catalog__sort__value">Price</span>
+                      <span class="catalog__sort__value">Author</span>
+                      <span class="catalog__sort__value">Name</span>
+                    </div>
                   </div>
-                  <div class="catalog__sort__list">
-                    <span class="catalog__sort__value">Price</span>
-                    <span class="catalog__sort__value">Author</span>
-                    <span class="catalog__sort__value">Name</span>
-                  </div>
-                </div>
 
-                <div class="catalog__sort__filter">
-                  <div class="catalog__filter__default">Show:</div>
-                  <div class="catalog__sort__inner">
-                    <span class="catalog__sort__text">6</span>
-                    <img src="./images/dest/catalog/sort__arrow.svg" alt="Arrow" class="catalog__sort__arrow">
-                  </div>
-                  <div class="catalog__sort__list">
-                    <span class="catalog__sort__value">6</span>
-                    <span class="catalog__sort__value">7</span>
-                    <span class="catalog__sort__value">8</span>
+                  <div class="catalog__sort__filter">
+                    <div class="catalog__filter__default">Show:</div>
+                    <div class="catalog__sort__inner">
+                      <span class="catalog__sort__text">6</span>
+                      <img src="./images/dest/catalog/sort__arrow.svg" alt="Arrow" class="catalog__sort__arrow">
+                    </div>
+                    <div class="catalog__sort__list">
+                      <span class="catalog__sort__value">6</span>
+                      <span class="catalog__sort__value">7</span>
+                      <span class="catalog__sort__value">8</span>
+                    </div>
                   </div>
                 </div>
+                <button class="btn filter__btn" id="openFilter">Filter</button>
               </div>
-              <button class="btn filter__btn" id="openFilter">Filter</button>
-            </div>
 
-            <div class="catalog__list">
-              <div class="container">
-                <div class="catalog__list__section">
-                  <h2 class="catalog__list__title">Top 50 activities for your kids</h2>
-                  <div class="catalog__list__inner row">
+              <div class="catalog__list">
+                <div class="container">
+                  <div class="catalog__list__section">
+                    <h2 class="catalog__list__title">Top 50 activities for your kids</h2>
+                    <div class="catalog__list__inner row">
 
-                    <div class="catalog__item col-6 col-lg-4" id="cartItemId-1">
-                      <div class="catalog__item__wrapper">
-                        <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
-                      </div>
-                      <div class="catalog__item__body">
-                        <h3 class="catalog__item__title">Lorem ipsum dolor sit amet.</h3>
-                        <div class="catalog__item__subtitle">
-                          <span class="catalog__author">Author:</span>
-                          <span class="catalog__name">PractiThink</span>
+                      <div class="catalog__item col-6 col-lg-4" id="cartItemId-1">
+                        <div class="catalog__item__wrapper">
+                          <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
                         </div>
-                      </div>
-                      <div class="catalog__item__bot">
-                        <span class="catalog__item__grade">
-                          Grade 4
-                        </span>
-                        <span class="catalog__item__price">$<span class="catalog__item__value">20</span></span>
-                      </div>
-                      <div class="catalog__mask">
-                        <div class="catalog__mask__wrapper">
-                          <button type="button" class="btn catalog__mask__btn catalog__buy">Add to cart</button>
-                          <a href="./detail.html" class="btn catalog__mask__btn">See details</a>
+                        <div class="catalog__item__body">
+                          <h3 class="catalog__item__title">Lorem ipsum dolor sit amet.</h3>
+                          <div class="catalog__item__subtitle">
+                            <span class="catalog__author">Author:</span>
+                            <span class="catalog__name">PractiThink</span>
+                          </div>
                         </div>
-                      </div>
-                      <div class="catalog__item__favorite">
-                        <span class="catalor__item__heart catalor__item__heart--active"></span>
-                      </div>
-                    </div>
-
-                    <div class="catalog__item col-6 col-lg-4" id="cartItemId-2">
-                      <div class="catalog__item__wrapper">
-                        <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
-                      </div>
-                      <div class="catalog__item__body">
-                        <h3 class="catalog__item__title">Lorem ipsum dolor sit amet.</h3>
-                        <div class="catalog__item__subtitle">
-                          <span class="catalog__author">Author:</span>
-                          <span class="catalog__name">PractiThink</span>
+                        <div class="catalog__item__bot">
+                          <span class="catalog__item__grade">
+                            Grade 4
+                          </span>
+                          <span class="catalog__item__price">$<span class="catalog__item__value">20</span></span>
                         </div>
-                      </div>
-                      <div class="catalog__item__bot">
-                        <span class="catalog__item__grade">
-                          Grade 4
-                        </span>
-                        <span class="catalog__item__price">$<span class="catalog__item__value">20</span></span>
-                      </div>
-                      <div class="catalog__mask">
-                        <div class="catalog__mask__wrapper">
-                          <button type="button" class="btn catalog__mask__btn catalog__buy">Add to cart</button>
-                          <a href="./detail.html" class="btn catalog__mask__btn">See details</a>
+                        <div class="catalog__mask">
+                          <div class="catalog__mask__wrapper">
+                            <button type="button" class="btn catalog__mask__btn catalog__buy">Add to cart</button>
+                            <a href="./detail.html" class="btn catalog__mask__btn">See details</a>
+                          </div>
                         </div>
-                      </div>
-                      <div class="catalog__item__favorite">
-                        <span class="catalor__item__heart"></span>
-                      </div>
-                    </div>
-
-                    <div class="catalog__item col-6 col-lg-4" id="cartItemId-3">
-                      <div class="catalog__item__wrapper">
-                        <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
-                      </div>
-                      <div class="catalog__item__body">
-                        <h3 class="catalog__item__title">Lorem ipsum dolor sit amet.</h3>
-                        <div class="catalog__item__subtitle">
-                          <span class="catalog__author">Author:</span>
-                          <span class="catalog__name">PractiThink</span>
+                        <div class="catalog__item__favorite">
+                          <span class="catalor__item__heart catalor__item__heart--active"></span>
                         </div>
-                      </div>
-                      <div class="catalog__item__bot">
-                        <span class="catalog__item__grade">
-                          Grade 4
-                        </span>
-                        <span class="catalog__item__price">$<span class="catalog__item__value">20</span></span>
-                      </div>
-                      <div class="catalog__mask">
-                        <div class="catalog__mask__wrapper">
-                          <button type="button" class="btn catalog__mask__btn catalog__buy">Add to cart</button>
-                          <a href="./detail.html" class="btn catalog__mask__btn">See details</a>
-                        </div>
-                      </div>
-                      <div class="catalog__item__favorite">
-                        <span class="catalor__item__heart catalor__item__heart--active"></span>
-                      </div>
-                    </div>
-
-                    <div class="catalog__item col-6 col-lg-4" id="cartItemId-4">
-                      <div class="catalog__item__wrapper">
-                        <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
-                      </div>
-                      <div class="catalog__item__body">
-                        <h3 class="catalog__item__title">Lorem ipsum dolor sit amet.</h3>
-                        <div class="catalog__item__subtitle">
-                          <span class="catalog__author">Author:</span>
-                          <span class="catalog__name">PractiThink</span>
-                        </div>
-                      </div>
-                      <div class="catalog__item__bot">
-                        <span class="catalog__item__grade">
-                          Grade 4
-                        </span>
-                        <span class="catalog__item__price">$<span class="catalog__item__value">20</span></span>
-                      </div>
-                      <div class="catalog__mask">
-                        <div class="catalog__mask__wrapper">
-                          <button type="button" class="btn catalog__mask__btn catalog__buy">Add to cart</button>
-                          <a href="./detail.html" class="btn catalog__mask__btn">See details</a>
-                        </div>
-                      </div>
-                      <div class="catalog__item__favorite">
-                        <span class="catalor__item__heart catalor__item__heart--active"></span>
-                      </div>
-                    </div>
-
-                    <div class="catalog__item col-6 col-lg-4" id="cartItemId-5">
-                      <div class="catalog__item__wrapper">
-                        <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
-                      </div>
-                      <div class="catalog__item__body">
-                        <h3 class="catalog__item__title">Lorem ipsum dolor sit amet.</h3>
-                        <div class="catalog__item__subtitle">
-                          <span class="catalog__author">Author:</span>
-                          <span class="catalog__name">PractiThink</span>
-                        </div>
-                      </div>
-                      <div class="catalog__item__bot">
-                        <span class="catalog__item__grade">
-                          Grade 4
-                        </span>
-                        <span class="catalog__item__price">$<span class="catalog__item__value">20</span></span>
-                      </div>
-                      <div class="catalog__mask">
-                        <div class="catalog__mask__wrapper">
-                          <button type="button" class="btn catalog__mask__btn catalog__buy">Add to cart</button>
-                          <a href="./detail.html" class="btn catalog__mask__btn">See details</a>
-                        </div>
-                      </div>
-                      <div class="catalog__item__favorite">
-                        <span class="catalor__item__heart"></span>
-                      </div>
-                    </div>
-
-                    <div class="catalog__item catalog__item catalog__item-special col-6 col-lg-4">
-                      <div class="catalog__special__wrapper">
-                        <img src="./images/dest/catalog/item--special.png" alt="Product" class="catalog__special__img">
                       </div>
 
-                      <div class="catalog__special__content">
-                        <div class="catalog__special__value">
-                          3450 printables
+                      <div class="catalog__item col-6 col-lg-4" id="cartItemId-2">
+                        <div class="catalog__item__wrapper">
+                          <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
                         </div>
-                        <div class="catalog__special__text">
-                          free and premium
+                        <div class="catalog__item__body">
+                          <h3 class="catalog__item__title">Lorem ipsum dolor sit amet.</h3>
+                          <div class="catalog__item__subtitle">
+                            <span class="catalog__author">Author:</span>
+                            <span class="catalog__name">PractiThink</span>
+                          </div>
                         </div>
-                        <a href="" class="btn btn--white catalog__special__btn">Select all</a>
+                        <div class="catalog__item__bot">
+                          <span class="catalog__item__grade">
+                            Grade 4
+                          </span>
+                          <span class="catalog__item__price">$<span class="catalog__item__value">20</span></span>
+                        </div>
+                        <div class="catalog__mask">
+                          <div class="catalog__mask__wrapper">
+                            <button type="button" class="btn catalog__mask__btn catalog__buy">Add to cart</button>
+                            <a href="./detail.html" class="btn catalog__mask__btn">See details</a>
+                          </div>
+                        </div>
+                        <div class="catalog__item__favorite">
+                          <span class="catalor__item__heart"></span>
+                        </div>
+                      </div>
+
+                      <div class="catalog__item col-6 col-lg-4" id="cartItemId-3">
+                        <div class="catalog__item__wrapper">
+                          <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
+                        </div>
+                        <div class="catalog__item__body">
+                          <h3 class="catalog__item__title">Lorem ipsum dolor sit amet.</h3>
+                          <div class="catalog__item__subtitle">
+                            <span class="catalog__author">Author:</span>
+                            <span class="catalog__name">PractiThink</span>
+                          </div>
+                        </div>
+                        <div class="catalog__item__bot">
+                          <span class="catalog__item__grade">
+                            Grade 4
+                          </span>
+                          <span class="catalog__item__price">$<span class="catalog__item__value">20</span></span>
+                        </div>
+                        <div class="catalog__mask">
+                          <div class="catalog__mask__wrapper">
+                            <button type="button" class="btn catalog__mask__btn catalog__buy">Add to cart</button>
+                            <a href="./detail.html" class="btn catalog__mask__btn">See details</a>
+                          </div>
+                        </div>
+                        <div class="catalog__item__favorite">
+                          <span class="catalor__item__heart catalor__item__heart--active"></span>
+                        </div>
+                      </div>
+
+                      <div class="catalog__item col-6 col-lg-4" id="cartItemId-4">
+                        <div class="catalog__item__wrapper">
+                          <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
+                        </div>
+                        <div class="catalog__item__body">
+                          <h3 class="catalog__item__title">Lorem ipsum dolor sit amet.</h3>
+                          <div class="catalog__item__subtitle">
+                            <span class="catalog__author">Author:</span>
+                            <span class="catalog__name">PractiThink</span>
+                          </div>
+                        </div>
+                        <div class="catalog__item__bot">
+                          <span class="catalog__item__grade">
+                            Grade 4
+                          </span>
+                          <span class="catalog__item__price">$<span class="catalog__item__value">20</span></span>
+                        </div>
+                        <div class="catalog__mask">
+                          <div class="catalog__mask__wrapper">
+                            <button type="button" class="btn catalog__mask__btn catalog__buy">Add to cart</button>
+                            <a href="./detail.html" class="btn catalog__mask__btn">See details</a>
+                          </div>
+                        </div>
+                        <div class="catalog__item__favorite">
+                          <span class="catalor__item__heart catalor__item__heart--active"></span>
+                        </div>
+                      </div>
+
+                      <div class="catalog__item col-6 col-lg-4" id="cartItemId-5">
+                        <div class="catalog__item__wrapper">
+                          <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
+                        </div>
+                        <div class="catalog__item__body">
+                          <h3 class="catalog__item__title">Lorem ipsum dolor sit amet.</h3>
+                          <div class="catalog__item__subtitle">
+                            <span class="catalog__author">Author:</span>
+                            <span class="catalog__name">PractiThink</span>
+                          </div>
+                        </div>
+                        <div class="catalog__item__bot">
+                          <span class="catalog__item__grade">
+                            Grade 4
+                          </span>
+                          <span class="catalog__item__price">$<span class="catalog__item__value">20</span></span>
+                        </div>
+                        <div class="catalog__mask">
+                          <div class="catalog__mask__wrapper">
+                            <button type="button" class="btn catalog__mask__btn catalog__buy">Add to cart</button>
+                            <a href="./detail.html" class="btn catalog__mask__btn">See details</a>
+                          </div>
+                        </div>
+                        <div class="catalog__item__favorite">
+                          <span class="catalor__item__heart"></span>
+                        </div>
+                      </div>
+
+                      <div class="catalog__item catalog__item catalog__item-special col-6 col-lg-4">
+                        <div class="catalog__special__wrapper">
+                          <img src="./images/dest/catalog/item--special.png" alt="Product"
+                            class="catalog__special__img">
+                        </div>
+
+                        <div class="catalog__special__content">
+                          <div class="catalog__special__value">
+                            3450 printables
+                          </div>
+                          <div class="catalog__special__text">
+                            free and premium
+                          </div>
+                          <a href="" class="btn btn--white catalog__special__btn">Select all</a>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="catalog__list__section">
-                  <h2 class="catalog__list__title">Top 50 activities for your kids</h2>
-                  <div class="catalog__list__inner row">
+                  <div class="catalog__list__section">
+                    <h2 class="catalog__list__title">Top 50 activities for your kids</h2>
+                    <div class="catalog__list__inner row">
 
-                    <div class="catalog__item col-6 col-lg-4" id="cartItemId-6">
-                      <div class="catalog__item__wrapper">
-                        <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
-                      </div>
-                      <div class="catalog__item__body">
-                        <h3 class="catalog__item__title">Lorem ipsum dolor sit amet.</h3>
-                        <div class="catalog__item__subtitle">
-                          <span class="catalog__author">Author:</span>
-                          <span class="catalog__name">PractiThink</span>
+                      <div class="catalog__item col-6 col-lg-4" id="cartItemId-6">
+                        <div class="catalog__item__wrapper">
+                          <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
+                        </div>
+                        <div class="catalog__item__body">
+                          <h3 class="catalog__item__title">Lorem ipsum dolor sit amet.</h3>
+                          <div class="catalog__item__subtitle">
+                            <span class="catalog__author">Author:</span>
+                            <span class="catalog__name">PractiThink</span>
+                          </div>
+                        </div>
+                        <div class="catalog__item__bot">
+                          <span class="catalog__item__grade">
+                            Grade 4
+                          </span>
+                          <span class="catalog__item__price">$<span class="catalog__item__value">20</span></span>
+                        </div>
+                        <div class="catalog__mask">
+                          <div class="catalog__mask__wrapper">
+                            <button type="button" class="btn catalog__mask__btn catalog__buy">Add to cart</button>
+                            <a href="./detail.html" class="btn catalog__mask__btn">See details</a>
+                          </div>
+                        </div>
+                        <div class="catalog__item__favorite">
+                          <span class="catalor__item__heart catalor__item__heart--active"></span>
                         </div>
                       </div>
-                      <div class="catalog__item__bot">
-                        <span class="catalog__item__grade">
-                          Grade 4
-                        </span>
-                        <span class="catalog__item__price">$<span class="catalog__item__value">20</span></span>
-                      </div>
-                      <div class="catalog__mask">
-                        <div class="catalog__mask__wrapper">
-                          <button type="button" class="btn catalog__mask__btn catalog__buy">Add to cart</button>
-                          <a href="./detail.html" class="btn catalog__mask__btn">See details</a>
+
+                      <div class="catalog__item col-6 col-lg-4" id="cartItemId-7">
+                        <div class="catalog__item__wrapper">
+                          <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
+                        </div>
+                        <div class="catalog__item__body">
+                          <h3 class="catalog__item__title">Lorem ipsum dolor sit amet.</h3>
+                          <div class="catalog__item__subtitle">
+                            <span class="catalog__author">Author:</span>
+                            <span class="catalog__name">PractiThink</span>
+                          </div>
+                        </div>
+                        <div class="catalog__item__bot">
+                          <span class="catalog__item__grade">
+                            Grade 4
+                          </span>
+                          <span class="catalog__item__price">$<span class="catalog__item__value">20</span></span>
+                        </div>
+                        <div class="catalog__mask">
+                          <div class="catalog__mask__wrapper">
+                            <button type="button" class="btn catalog__mask__btn catalog__buy">Add to cart</button>
+                            <a href="./detail.html" class="btn catalog__mask__btn">See details</a>
+                          </div>
+                        </div>
+                        <div class="catalog__item__favorite">
+                          <span class="catalor__item__heart catalor__item__heart--active"></span>
                         </div>
                       </div>
-                      <div class="catalog__item__favorite">
-                        <span class="catalor__item__heart catalor__item__heart--active"></span>
+
+                      <div class="catalog__item col-6 col-lg-4" id="cartItemId-8">
+                        <div class="catalog__item__wrapper">
+                          <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
+                        </div>
+                        <div class="catalog__item__body">
+                          <h3 class="catalog__item__title">Lorem ipsum dolor sit amet.</h3>
+                          <div class="catalog__item__subtitle">
+                            <span class="catalog__author">Author:</span>
+                            <span class="catalog__name">PractiThink</span>
+                          </div>
+                        </div>
+                        <div class="catalog__item__bot">
+                          <span class="catalog__item__grade">
+                            Grade 4
+                          </span>
+                          <span class="catalog__item__price">$<span class="catalog__item__value">20</span></span>
+                        </div>
+                        <div class="catalog__mask">
+                          <div class="catalog__mask__wrapper">
+                            <button type="button" class="btn catalog__mask__btn catalog__buy">Add to cart</button>
+                            <a href="./detail.html" class="btn catalog__mask__btn">See details</a>
+                          </div>
+                        </div>
+                        <div class="catalog__item__favorite">
+                          <span class="catalor__item__heart catalor__item__heart--active"></span>
+                        </div>
                       </div>
+
+                      <div class="catalog__item col-6 col-lg-4" id="cartItemId-9">
+                        <div class="catalog__item__wrapper">
+                          <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
+                        </div>
+                        <div class="catalog__item__body">
+                          <h3 class="catalog__item__title">Lorem ipsum dolor sit amet.</h3>
+                          <div class="catalog__item__subtitle">
+                            <span class="catalog__author">Author:</span>
+                            <span class="catalog__name">PractiThink</span>
+                          </div>
+                        </div>
+                        <div class="catalog__item__bot">
+                          <span class="catalog__item__grade">
+                            Grade 4
+                          </span>
+                          <span class="catalog__item__price">$<span class="catalog__item__value">20</span></span>
+                        </div>
+                        <div class="catalog__mask">
+                          <div class="catalog__mask__wrapper">
+                            <button type="button" class="btn catalog__mask__btn catalog__buy">Add to cart</button>
+                            <a href="./detail.html" class="btn catalog__mask__btn">See details</a>
+                          </div>
+                        </div>
+                        <div class="catalog__item__favorite">
+                          <span class="catalor__item__heart catalor__item__heart--active"></span>
+                        </div>
+                      </div>
+
+                      <div class="catalog__item col-6 col-lg-4" id="cartItemId-10">
+                        <div class="catalog__item__wrapper">
+                          <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
+                        </div>
+                        <div class="catalog__item__body">
+                          <h3 class="catalog__item__title">Lorem ipsum dolor sit amet.</h3>
+                          <div class="catalog__item__subtitle">
+                            <span class="catalog__author">Author:</span>
+                            <span class="catalog__name">PractiThink</span>
+                          </div>
+                        </div>
+                        <div class="catalog__item__bot">
+                          <span class="catalog__item__grade">
+                            Grade 4
+                          </span>
+                          <span class="catalog__item__price">$<span class="catalog__item__value">20</span></span>
+                        </div>
+                        <div class="catalog__mask">
+                          <div class="catalog__mask__wrapper">
+                            <button type="button" class="btn catalog__mask__btn catalog__buy">Add to cart</button>
+                            <a href="./detail.html" class="btn catalog__mask__btn">See details</a>
+                          </div>
+                        </div>
+                        <div class="catalog__item__favorite">
+                          <span class="catalor__item__heart catalor__item__heart--active"></span>
+                        </div>
+                      </div>
+
+                      <div class="catalog__item catalog__item catalog__item-special col-6 col-lg-4">
+                        <div class="catalog__special__wrapper">
+                          <img src="./images/dest/catalog/item--special.png" alt="Product"
+                            class="catalog__special__img">
+                        </div>
+
+                        <div class="catalog__special__content">
+                          <div class="catalog__special__value">
+                            3450 printables
+                          </div>
+                          <div class="catalog__special__text">
+                            free and premium
+                          </div>
+                          <a href="" class="btn btn--white catalog__special__btn">Select all</a>
+                        </div>
+                      </div>
+
                     </div>
-
-                    <div class="catalog__item col-6 col-lg-4" id="cartItemId-7">
-                      <div class="catalog__item__wrapper">
-                        <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
-                      </div>
-                      <div class="catalog__item__body">
-                        <h3 class="catalog__item__title">Lorem ipsum dolor sit amet.</h3>
-                        <div class="catalog__item__subtitle">
-                          <span class="catalog__author">Author:</span>
-                          <span class="catalog__name">PractiThink</span>
-                        </div>
-                      </div>
-                      <div class="catalog__item__bot">
-                        <span class="catalog__item__grade">
-                          Grade 4
-                        </span>
-                        <span class="catalog__item__price">$<span class="catalog__item__value">20</span></span>
-                      </div>
-                      <div class="catalog__mask">
-                        <div class="catalog__mask__wrapper">
-                          <button type="button" class="btn catalog__mask__btn catalog__buy">Add to cart</button>
-                          <a href="./detail.html" class="btn catalog__mask__btn">See details</a>
-                        </div>
-                      </div>
-                      <div class="catalog__item__favorite">
-                        <span class="catalor__item__heart catalor__item__heart--active"></span>
-                      </div>
-                    </div>
-
-                    <div class="catalog__item col-6 col-lg-4" id="cartItemId-8">
-                      <div class="catalog__item__wrapper">
-                        <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
-                      </div>
-                      <div class="catalog__item__body">
-                        <h3 class="catalog__item__title">Lorem ipsum dolor sit amet.</h3>
-                        <div class="catalog__item__subtitle">
-                          <span class="catalog__author">Author:</span>
-                          <span class="catalog__name">PractiThink</span>
-                        </div>
-                      </div>
-                      <div class="catalog__item__bot">
-                        <span class="catalog__item__grade">
-                          Grade 4
-                        </span>
-                        <span class="catalog__item__price">$<span class="catalog__item__value">20</span></span>
-                      </div>
-                      <div class="catalog__mask">
-                        <div class="catalog__mask__wrapper">
-                          <button type="button" class="btn catalog__mask__btn catalog__buy">Add to cart</button>
-                          <a href="./detail.html" class="btn catalog__mask__btn">See details</a>
-                        </div>
-                      </div>
-                      <div class="catalog__item__favorite">
-                        <span class="catalor__item__heart catalor__item__heart--active"></span>
-                      </div>
-                    </div>
-
-                    <div class="catalog__item col-6 col-lg-4" id="cartItemId-9">
-                      <div class="catalog__item__wrapper">
-                        <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
-                      </div>
-                      <div class="catalog__item__body">
-                        <h3 class="catalog__item__title">Lorem ipsum dolor sit amet.</h3>
-                        <div class="catalog__item__subtitle">
-                          <span class="catalog__author">Author:</span>
-                          <span class="catalog__name">PractiThink</span>
-                        </div>
-                      </div>
-                      <div class="catalog__item__bot">
-                        <span class="catalog__item__grade">
-                          Grade 4
-                        </span>
-                        <span class="catalog__item__price">$<span class="catalog__item__value">20</span></span>
-                      </div>
-                      <div class="catalog__mask">
-                        <div class="catalog__mask__wrapper">
-                          <button type="button" class="btn catalog__mask__btn catalog__buy">Add to cart</button>
-                          <a href="./detail.html" class="btn catalog__mask__btn">See details</a>
-                        </div>
-                      </div>
-                      <div class="catalog__item__favorite">
-                        <span class="catalor__item__heart catalor__item__heart--active"></span>
-                      </div>
-                    </div>
-
-                    <div class="catalog__item col-6 col-lg-4" id="cartItemId-10">
-                      <div class="catalog__item__wrapper">
-                        <img src="./images/dest/catalog/catalog__item.png" alt="Product" class="catalog__item__img">
-                      </div>
-                      <div class="catalog__item__body">
-                        <h3 class="catalog__item__title">Lorem ipsum dolor sit amet.</h3>
-                        <div class="catalog__item__subtitle">
-                          <span class="catalog__author">Author:</span>
-                          <span class="catalog__name">PractiThink</span>
-                        </div>
-                      </div>
-                      <div class="catalog__item__bot">
-                        <span class="catalog__item__grade">
-                          Grade 4
-                        </span>
-                        <span class="catalog__item__price">$<span class="catalog__item__value">20</span></span>
-                      </div>
-                      <div class="catalog__mask">
-                        <div class="catalog__mask__wrapper">
-                          <button type="button" class="btn catalog__mask__btn catalog__buy">Add to cart</button>
-                          <a href="./detail.html" class="btn catalog__mask__btn">See details</a>
-                        </div>
-                      </div>
-                      <div class="catalog__item__favorite">
-                        <span class="catalor__item__heart catalor__item__heart--active"></span>
-                      </div>
-                    </div>
-
-                    <div class="catalog__item catalog__item catalog__item-special col-6 col-lg-4">
-                      <div class="catalog__special__wrapper">
-                        <img src="./images/dest/catalog/item--special.png" alt="Product" class="catalog__special__img">
-                      </div>
-
-                      <div class="catalog__special__content">
-                        <div class="catalog__special__value">
-                          3450 printables
-                        </div>
-                        <div class="catalog__special__text">
-                          free and premium
-                        </div>
-                        <a href="" class="btn btn--white catalog__special__btn">Select all</a>
-                      </div>
-                    </div>
-
                   </div>
                 </div>
               </div>
@@ -611,7 +618,15 @@
       <div class="cart__wrapper">
         <div class="cart__inner">
           <div class="cart__head">
-            <h2 class="cart__title">Cart</h2>
+            <div class="cart__title__wrapper">
+              <h2 class="cart__title">Cart</h2>
+              <div class="header__item cart__title__item">
+                <span class="header__circle basketCount">0</span>
+                <a href="./purchase.html" class="header__icon" id="basket">
+                  <img src="./images/dest/catalog/basket.svg" alt="Favorite">
+                </a>
+              </div>
+            </div>
             <button type="button" class="cart__close" id="cartClose">
               <svg width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -634,7 +649,7 @@
                 <div class="cart__content__wrapper">
 
                   <div class="cart__add__item">
-                    <button class="cart__btn cart__btn--less" type="button" disabled>
+                    <button class="cart__btn cart__btn--less" type="button">
                       <svg width="11" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                           d="M9.553 16.86c.13 0 .258-.036.367-.103a.623.623 0 00.242-.273.566.566 0 00.038-.352.596.596 0 00-.18-.312L2.356 8.739l7.662-7.081a.585.585 0 00.185-.429.587.587 0 00-.193-.425.688.688 0 00-.46-.179.69.69 0 00-.464.171L.957 8.308a.587.587 0 00-.192.431c0 .162.07.317.193.43l8.129 7.513a.665.665 0 00.214.132.72.72 0 00.252.046z"
@@ -665,7 +680,7 @@
                 <div class="cart__content__wrapper">
 
                   <div class="cart__add__item">
-                    <button class="cart__btn cart__btn--less" type="button" disabled>
+                    <button class="cart__btn cart__btn--less" type="button">
                       <svg width="11" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                           d="M9.553 16.86c.13 0 .258-.036.367-.103a.623.623 0 00.242-.273.566.566 0 00.038-.352.596.596 0 00-.18-.312L2.356 8.739l7.662-7.081a.585.585 0 00.185-.429.587.587 0 00-.193-.425.688.688 0 00-.46-.179.69.69 0 00-.464.171L.957 8.308a.587.587 0 00-.192.431c0 .162.07.317.193.43l8.129 7.513a.665.665 0 00.214.132.72.72 0 00.252.046z"
@@ -696,7 +711,7 @@
                 <div class="cart__content__wrapper">
 
                   <div class="cart__add__item">
-                    <button class="cart__btn cart__btn--less" type="button" disabled>
+                    <button class="cart__btn cart__btn--less" type="button">
                       <svg width="11" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                           d="M9.553 16.86c.13 0 .258-.036.367-.103a.623.623 0 00.242-.273.566.566 0 00.038-.352.596.596 0 00-.18-.312L2.356 8.739l7.662-7.081a.585.585 0 00.185-.429.587.587 0 00-.193-.425.688.688 0 00-.46-.179.69.69 0 00-.464.171L.957 8.308a.587.587 0 00-.192.431c0 .162.07.317.193.43l8.129 7.513a.665.665 0 00.214.132.72.72 0 00.252.046z"
@@ -724,7 +739,6 @@
             <div class="cart__total__value">$<span class="cart__total__number">659</span></div>
           </div>
           <div class="cart__description">
-            <div class="cart__advantag">Free Shipping</div>
             <div class="cart__advantag__description">
               Taxes and Discount Calculated at Checkout
             </div>

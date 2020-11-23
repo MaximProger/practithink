@@ -5,6 +5,13 @@
   .container {
     max-width: 1130px;
   }
+
+  padding-bottom: 40px;
+}
+
+.detail__body {
+  display: flex;
+  justify-content: center;
 }
 
 .detail__title__wrapper {
@@ -561,6 +568,7 @@
 
   &--dislike {
     margin-left: 15px;
+    margin-top: 12px;
   }
 }
 
@@ -581,6 +589,7 @@
 
   &--active {
     .detail__like__img {
+      transition: all 0.2s linear;
       background: url("../images/dest/detail/like--active.svg") no-repeat center;
 
       &--dislike {
@@ -765,6 +774,10 @@
   color: #5a5a5a;
 }
 
+.filter__btn--detail {
+  display: none;
+}
+
 @media (max-width: $tablet) {
   .detail__filter {
     display: none;
@@ -837,7 +850,8 @@
   }
 
   .detail__reviews__inner {
-    width: 100%;
+    max-width: 300px;
+    width: 375px;
   }
 
   .detail__nav__item {
@@ -854,6 +868,13 @@
 
   .detail__nav {
     margin-bottom: 40px;
+    margin-top: 45px;
+  }
+
+  .detail__nav--tab .detail__tab__btn {
+    position: absolute;
+    right: 0;
+    bottom: 25px;
   }
 
   .btn.detail__buy__btn {
@@ -882,5 +903,9 @@
       position: static;
       margin-bottom: 5px;
     }
+  }
+
+  .detail__section__hidden {
+    padding: 0;
   }
 }

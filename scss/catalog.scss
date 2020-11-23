@@ -33,7 +33,7 @@
   left: calc(-2.5rem + 2px);
   width: 16px;
   height: 16px;
-  background-color: #0e80a4;
+  background-color: #369cb7;
 }
 
 .pannel__switch .custom-control-label::before {
@@ -43,7 +43,7 @@
   height: 20px;
   pointer-events: all;
   background: #fdfeff;
-  border: 1px solid #0e80a4;
+  border: 1px solid #369cb7;
   box-sizing: border-box;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
@@ -51,6 +51,12 @@
 
 .pannel__switch .custom-control-input:checked ~ .custom-control-label::after {
   transform: translateX(0.95rem);
+}
+
+.pannel__switch .custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: #369cb7;
+  background-color: #369cb7;
 }
 
 .pannel__inner {
@@ -70,22 +76,49 @@
 }
 
 .pannel__wrapper {
-  display: flex;
+  display: none;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  &--active {
+    display: flex;
+  }
+}
+
+.pannel__icon {
+  display: inline-block;
+  height: 9px;
+  width: 9px;
+  margin-right: 4px;
+  background: url("../images/dest/catalog/plus.svg") no-repeat center;
+  transition: all 0.2s linear;
 }
 
 .btn.pannel__btn {
-  width: 13%;
-  background: transparent;
+  background: #ecf7f9;
   color: #0e80a4;
-  border-color: #0e80a4;
-  font-weight: 300;
+  border-color: #ecf7f9;
+  font-size: 16px;
+  line-height: 20px;
+  height: 25px;
+  width: auto;
+  margin-right: 14px;
+  margin-bottom: 5px;
 
-  &--active {
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--active,
+  &:hover {
     color: #fff;
-    background: #47858e;
-    border-color: #47858e;
+    background: #0e80a4;
+    border-color: #0e80a4;
+
+    .pannel__icon {
+      background: url("../images/dest/catalog/ok.svg") no-repeat center;
+    }
   }
 }
 
@@ -109,12 +142,19 @@
   color: #5a5a5a;
 }
 
+.catalog__body {
+  .container {
+    max-width: 1140px;
+    padding: 0 20px;
+  }
+}
+
 // Filter
 .catalog__filter {
   padding-top: 7px;
-  padding-left: 91px;
+  // padding-left: 91px;
   background: #ffffff;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 15px 0px 20px rgba(0, 0, 0, 0.05);
 }
 
 .catalog__filter__group {
@@ -268,6 +308,7 @@
 
 // Catalog List
 .catalog__list {
+  padding-left: 87px;
   .container {
     max-width: 760px;
     padding-left: 0;
@@ -447,8 +488,8 @@
 }
 
 @media (max-width: $tablet) {
-  .catalog__catalog__wrapper {
-    padding: 0 15px;
+  .catalog__list {
+    padding-left: 0px;
   }
 
   .catalog__sort {
@@ -522,7 +563,7 @@
   .btn.pannel__btn {
     width: auto;
     margin: 0 2.5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
   .catalog__sort__wrapper {
