@@ -108,8 +108,10 @@ $(document).ready(function () {
 
   // Questions
   $(".detail__question__head").click(function () {
-    $(".detail__question__head").removeClass("detail__question__head--active");
-    $(this).addClass("detail__question__head--active");
+    $(this).toggleClass("detail__question__head--active");
+    $(".detail__question__head")
+      .not($(this))
+      .removeClass("detail__question__head--active");
   });
 
   // Open Filter
