@@ -141,7 +141,8 @@
           </p>
 
           <p class="faq__description">
-            Already a PractiThink customer? Sign in here, if you are encountering a technical or payment issue, the
+            Already a PractiThink customer? <a href="#" class="faq__link">Sign in here</a>, if you are encountering a
+            technical or payment issue, the
             customer support team will be happy to assist you.
           </p>
         </div>
@@ -257,7 +258,7 @@
           </div>
 
           <div class="contact__form col-md-4 col-12">
-            <h2 class="contact__inner__title">Popular FAQ and guides</h2>
+            <h2 class="contact__inner__title">Contact PractiThink</h2>
             <form action="./faq2.html" class="contact__form__form">
               <div class="select select--contact" id="contactSelect">
                 <div class="select__wrapper">
@@ -282,13 +283,15 @@
               <input type="text" class="form-control payment__input contact__inner__input contact__inner__input--select"
                 name="contactSelectInput" value="" id="contactSelectInput" required>
               <input type="text" class="form-control payment__input contact__inner__input contact__inner__input--hide"
-                name="companyname" id="companyname" placeholder="Company Name">
+                name="social" id="social" placeholder="Company or Social Media URL">
               <input type="text" class="form-control payment__input contact__inner__input contact__inner__input--hide"
                 name="account" id="account" placeholder="Account #">
-              <input type="text" class="form-control payment__input contact__inner__input" name="fullname" id="fullname"
-                placeholder="Full Name *" required>
-              <input type="email" class="form-control payment__input contact__inner__input" name="emailaddress"
-                id="emailaddress" placeholder="Email Address *" required>
+              <input type="text" class="form-control payment__input contact__inner__input contact__inner__input--none"
+                name="companyname" id="companyname" placeholder="Company Name">
+              <input type="text" class="form-control payment__input contact__inner__input contact__inner__input--none"
+                name="fullname" id="fullname" placeholder="Full Name *" required>
+              <input type="email" class="form-control payment__input contact__inner__input contact__inner__input--none"
+                name="emailaddress" id="emailaddress" placeholder="Email Address *" required>
               <textarea class="form-control payment__input contact__inner__input contact__inner__input--textarea"
                 name="message" id="message" placeholder="Message *" required></textarea>
 

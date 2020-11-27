@@ -644,6 +644,16 @@
   }
 }
 
+.detail__support {
+  &--faq {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+}
+
 .detail__support__title {
   font-weight: bold;
   font-size: 18px;
@@ -878,6 +888,10 @@
   .detail__reviews__inner {
     max-width: 300px;
     width: 375px;
+  }
+
+  .detail__question__body {
+    padding-right: 15px;
   }
 
   .detail__nav__item {

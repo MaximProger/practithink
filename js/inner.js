@@ -1,7 +1,8 @@
 $(document).ready(function () {
   // FAQ
   $("#hideFaqIntro").click(function () {
-    $(this).parent(".faq__intro").slideUp();
+    $("#faqIntroAbsolute").hide();
+    $("#faqIntroStatic").fadeIn();
   });
 
   // Questions
@@ -48,15 +49,37 @@ $(document).ready(function () {
         $("#account").hide();
         $("#account").attr("required", false);
 
-        $("#companyname").fadeIn();
-        $("#companyname").attr("required", true);
+        $("#social").fadeIn();
+        $("#social").attr("required", true);
+
+        $(".contact__inner__input--none").removeClass(
+          "contact__inner__input--none--active"
+        );
       } else {
-        $("#companyname").hide();
-        $("#companyname").attr("required", false);
+        $("#social").hide();
+        $("#social").attr("required", false);
 
         $("#account").fadeIn();
         $("#account").attr("required", true);
+
+        $(".contact__inner__input--none").addClass(
+          "contact__inner__input--none--active"
+        );
+
+        $(".contact__inner__input--none").attr("required", false);
       }
     }
+  });
+
+  // Nav Link
+  $(".nav__inner__item").click(function (evt) {
+    evt.preventDefault();
+    $(".nav__inner__item").removeClass("nav__inner__item--active");
+    $(this).addClass("nav__inner__item--active");
+    let navItemId = $(this).attr("id");
+    $(".detail__support--faq").removeClass("detail__support--faq--active");
+    $("[data-question=" + navItemId + "]").addClass(
+      "detail__support--faq--active"
+    );
   });
 });
