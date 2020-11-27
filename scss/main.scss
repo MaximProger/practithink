@@ -5,6 +5,7 @@
 @import "pay";
 @import "purchase";
 @import "fee";
+@import "inner";
 
 body {
   min-width: 320px;
@@ -44,10 +45,20 @@ label {
   &--payment {
     padding-top: 133px;
   }
+
+  &--nospace {
+    padding-top: 71px;
+  }
 }
 
 .container {
   max-width: 760px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.container--fluid {
+  max-width: 1130px;
   padding: 0 15px;
   margin: 0 auto;
 }
