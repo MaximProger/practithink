@@ -505,6 +505,11 @@
   display: none;
 }
 
+.payment__input.pay__input {
+  padding-left: 7px;
+  margin-bottom: 10px;
+}
+
 @media (max-width: $tablet) {
   .catalog__list {
     padding-left: 0px;
