@@ -1,0 +1,32 @@
+@import "config";
+
+.tooltip {
+  opacity: 1 !important;
+}
+
+.tooltip-inner {
+  background: #ffffff;
+  border-radius: 7px;
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  color: #5a5a5a;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06);
+  min-height: 32px;
+  padding: 6px 8px;
+}
+
+.tooltip-arrow {
+  position: absolute;
+  transform: translate(-50%, 0);
+  width: 9px;
+  border: 9px solid transparent; /* Прозрачные границы */
+  border-top: 9px solid #fff; /* Добавляем треугольник */
+
+  &--top {
+    left: 50%;
+    bottom: -9px;
+  }
+}

@@ -6,6 +6,12 @@
 @import "purchase";
 @import "fee";
 @import "inner";
+@import "modals";
+@import "chat";
+@import "tooltip";
+@import "video";
+@import "calendar";
+@import "pagination";
 
 * {
   box-sizing: border-box;
@@ -20,6 +26,11 @@ body {
   font-family: "Nunito", sans-serif;
   overflow-x: hidden;
   box-sizing: border-box;
+
+  &.fixed {
+    overflow: hidden;
+    max-height: 100vh;
+  }
 }
 
 input::-webkit-outer-spin-button,
@@ -40,6 +51,50 @@ label {
 
 .slick-slide {
   outline: none;
+}
+
+.default__mark {
+  background: #ecf7f9;
+  border-radius: 20px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #0e80a4;
+  padding: 4px 17px;
+}
+
+.search__item {
+  position: relative;
+  width: 222px;
+  height: 40px;
+}
+
+.search__input {
+  border: 1px solid #68c2d0;
+  box-sizing: border-box;
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+  padding-left: 25px;
+  padding-right: 37px;
+  color: $text;
+  font-size: 15px;
+  line-height: 20px;
+  font-family: "Nunito", sans-serif;
+
+  &::placeholder {
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #68c2d0;
+  }
+}
+
+.search__icon {
+  position: absolute;
+  top: 8.65px;
+  right: 16px;
 }
 
 .main {
@@ -878,6 +933,83 @@ label {
   }
 }
 
+// Cabinet
+.cabinet__pannel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &--video {
+    margin-bottom: 45px;
+  }
+
+  .back {
+    position: static;
+    transform: none;
+    margin-right: 37px;
+  }
+}
+
+.cabinet__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.cabinet__pannel__inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.cabinet__pannel__btn {
+  margin-left: 9px;
+}
+
+.cabinet__title__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.cabinet__checkbox__item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.cabinet__checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.cabinet__checkbox + .cabinet__label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  transition: all 0.2s linear;
+}
+.cabinet__checkbox + .cabinet__label::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #c4c4c4;
+  border-radius: 2px;
+  margin-right: 11px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.cabinet__checkbox:checked + .cabinet__label::before {
+  border-color: #68c2d0;
+  background-color: #68c2d0;
+}
+
 @media (max-width: $tablet) {
   .modal__window {
     width: 90%;
@@ -886,6 +1018,33 @@ label {
 }
 
 @media (max-width: $mobile) {
+  .cabinet__pannel {
+    flex-direction: column;
+
+    .back {
+      margin-bottom: 10px;
+    }
+  }
+
+  .cabinet__title {
+    margin-bottom: 15px;
+  }
+
+  .cabinet__title__wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .cabinet__pannel__inner {
+    flex-direction: column;
+  }
+
+  .btn.cabinet__pannel__btn {
+    width: 222px;
+    margin-top: 10px;
+  }
+
   // Price page
   .info__logo {
     text-align: center;

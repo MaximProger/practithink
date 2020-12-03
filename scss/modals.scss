@@ -1,0 +1,281 @@
+@import "config";
+
+.modals {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  z-index: 1000;
+  max-width: 636px;
+  width: 100%;
+  border-radius: 7px;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  &--hint {
+    .modals__body {
+      height: 390px;
+      align-items: flex-start;
+      padding-top: 42px;
+      padding-right: 22px;
+    }
+
+    .decide__box {
+      margin-top: 40px;
+    }
+  }
+
+  &--big {
+    max-width: 913px;
+  }
+}
+
+.modals__head {
+  position: relative;
+  background: #68c2d0;
+  box-shadow: 0px 0px 15px rgba(104, 194, 208, 0.4);
+  border-radius: 7px 7px 0px 0px;
+  height: 83px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modals__title {
+  text-align: center;
+  font-size: 20px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.modals__title__wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+
+  span {
+    display: inline-block;
+    margin-bottom: 6px;
+  }
+}
+
+.modals__close {
+  background: none;
+  border: none;
+  transition: all 0.2s linear;
+  position: absolute;
+  right: 36px;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.modals__time {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 18px;
+  color: #fffcfc;
+  position: absolute;
+  top: 50%;
+  left: 23px;
+  transform: translate(0, -50%);
+}
+
+.modals__body {
+  padding-top: 22px;
+  padding-bottom: 32px;
+  padding-left: 62px;
+  padding-right: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modals__body__wrapper {
+  text-align: center;
+
+  .modals__text {
+    text-align: left;
+  }
+}
+
+.modals__row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+
+  &--single {
+    justify-content: center;
+  }
+}
+
+.modals__line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modals__column {
+  width: 45%;
+
+  .cabinet__input {
+    max-width: 49px;
+  }
+}
+
+.modals__column__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 25px;
+  text-align: right;
+}
+
+.modals__column__line {
+  margin-bottom: 23px;
+  text-align: center;
+}
+
+.modals__btn__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 13px;
+
+  &--three {
+    .btn.modals__btn {
+      width: 141px;
+
+      &--submit {
+        filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.15));
+        width: 199px;
+      }
+    }
+  }
+}
+
+.btn.modals__btn {
+  max-width: 353px;
+  height: 41px;
+  margin: 0 7.5px;
+}
+
+.modals__form {
+  width: 100%;
+}
+
+.modals__problem {
+  text-align: center;
+  color: #f3967c;
+  margin-bottom: 13px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s linear;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.modal__text {
+  font-size: 14px;
+  line-height: 19px;
+  margin-bottom: 22px;
+  width: 100%;
+}
+
+.modals__center__wrapper {
+  padding-top: 17px;
+  padding-bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.modals__subtitle {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.modals__radio__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modals__radio {
+  margin: 0 12px;
+}
+
+@media (max-width: $mobile) {
+  .modals {
+    max-width: 370px;
+
+    &--hint {
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      // top: 0;
+      // left: 0;
+      // right: 0;
+      // bottom: 0;
+      max-width: 100%;
+
+      .modals__head {
+        align-items: center;
+      }
+
+      .modals__close {
+        right: 15px;
+        top: 57%;
+      }
+    }
+  }
+
+  .modals__time {
+    bottom: 5px;
+    top: auto;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .modals__line {
+    font-size: 14px;
+  }
+
+  .modals__body {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .modals__column {
+    width: 48%;
+  }
+
+  .modals {
+    &--hint {
+      .modals__body {
+        height: auto;
+      }
+
+      .decide__box {
+        margin-top: 0px;
+        flex-direction: column;
+      }
+    }
+  }
+}

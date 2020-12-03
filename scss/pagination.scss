@@ -1,0 +1,53 @@
+@import "config";
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 51px;
+
+  &--video {
+    margin-top: 19px;
+  }
+}
+
+.pagination__wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.pagination__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 6.5px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 20px;
+  color: #2f2f2f;
+  transition: all 0.2s linear;
+  border-radius: 50%;
+
+  &:hover {
+    color: #68c2d0;
+  }
+
+  &.active {
+    background: #68c2d0;
+    color: #fff;
+  }
+}
+
+@media (max-width: $mobile) {
+  .pagination__wrapper {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .pagination__item {
+    margin: 0;
+  }
+}

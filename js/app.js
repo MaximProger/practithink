@@ -1,4 +1,12 @@
 $(document).ready(function () {
+  // Tooltip
+  if ($('[data-toggle="tooltip"]').length) {
+    $('[data-toggle="tooltip"]').tooltip({
+      template:
+        '<div class="tooltip"><div class="tooltip-arrow tooltip-arrow--top"></div><div class="tooltip-inner"></div></div>',
+    });
+  }
+
   // Student
   let totalCost = 0;
   let priceDefualt = +$(".choose__tarif--active")
