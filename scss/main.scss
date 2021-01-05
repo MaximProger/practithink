@@ -12,6 +12,10 @@
 @import "video";
 @import "calendar";
 @import "pagination";
+@import "progress";
+@import "choose";
+@import "taskList";
+@import "taskDecide";
 
 * {
   box-sizing: border-box;
@@ -47,6 +51,18 @@ label {
     box-shadow: none;
     outline: none;
   }
+}
+
+.blue__text {
+  color: #0e80a4;
+}
+
+.green__text {
+  color: #9dd765;
+}
+
+.gray__text {
+  color: #5a5a5a;
 }
 
 .slick-slide {

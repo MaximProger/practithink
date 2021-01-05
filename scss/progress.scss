@@ -1,0 +1,53 @@
+@import "config";
+
+.progress__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &--result {
+    .rogress__item {
+      background: #c4c4c4;
+
+      &.active {
+        background: #4b7c61;
+      }
+
+      &.wrong {
+        background: #f3967c;
+      }
+
+      &.current {
+        background: #9dd765;
+      }
+    }
+    margin-bottom: 50px;
+
+    &--title {
+      margin-bottom: 23px;
+    }
+  }
+}
+
+.rogress__item {
+  display: inline-block;
+  background: #4b7c61;
+  border-radius: 7px;
+  height: 9px;
+  width: 100%;
+  margin-right: 2px;
+  transition: all 0.2s linear;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.active {
+    background: #9dd765;
+    pointer-events: none;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

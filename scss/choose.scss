@@ -1,0 +1,68 @@
+@import "config";
+
+.choose {
+  width: 100%;
+}
+
+.choose__wrapper {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.choose__item {
+  margin: 0 16px;
+  transition: all 0.2s linear;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background: #9dd765;
+    transition: all 0.2s linear;
+    border-radius: 9px;
+    height: 3px;
+    width: 100%;
+    z-index: 10;
+    display: none;
+  }
+
+  &.active {
+    .choose__img {
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+      border: 2px solid #9dd765;
+    }
+
+    &::after {
+      display: block;
+    }
+  }
+}
+
+.choose__img {
+  border: 1px dashed #68c2d0;
+  border-radius: 7px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  width: 119.72px;
+  height: 119.72px;
+  position: relative;
+
+  &:hover {
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@media (max-width: $mobile) {
+  .choose__wrapper {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .choose__item {
+    margin-bottom: 15px;
+  }
+}
