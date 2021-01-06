@@ -234,7 +234,7 @@
   margin-bottom: 24px;
 
   &:hover {
-    background: rgba(104, 194, 208, 0.03);
+    background: rgba(104, 194, 208, 0.1);
 
     .task__info__line__figure {
       opacity: 1;
@@ -325,7 +325,34 @@
   }
 }
 
+.task__info__arrow {
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 0;
+  transform: rotate(180deg);
+  transition: all 0.2s linear;
+
+  img {
+    width: 20.8px;
+    height: 13px;
+  }
+}
+
 @media (max-width: $mobile) {
+  .task__info__line {
+    padding-bottom: 26px;
+    &.active {
+      .task__info__line__wrapper {
+        display: flex;
+      }
+
+      .task__info__arrow {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
   .task__list__intro {
     .back {
       top: -10px;
@@ -335,6 +362,7 @@
 
   .task__info__line__wrapper {
     flex-wrap: wrap;
+    display: none;
 
     .task__info__list__wrapper {
       &:last-child {
@@ -346,5 +374,12 @@
   .task__info__list__wrapper {
     margin-bottom: 15px;
     width: 100%;
+  }
+
+  .task__info__name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
   }
 }
